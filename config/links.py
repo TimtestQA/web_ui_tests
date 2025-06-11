@@ -1,7 +1,6 @@
-
 class Links:
 
-    HOST = "http://qa-playground-social.com"
+    HOST = "https://demo5.openteknik.com"
 
     LOGIN_PAGE = f"{HOST}/login"
     HOME_PAGE = f"{HOST}/home"

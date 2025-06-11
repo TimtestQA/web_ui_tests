@@ -20,6 +20,8 @@ class BasePage(metaclass=MetaLocator):
 
     @allure.step("Check if page is opened")
     def is_opened(self):
+        print(f"Expected URL: {self._PAGE_URL}")
+        print(f"Current URL: {self.driver.current_url}")
         self.wait.until(EC.url_to_be(self._PAGE_URL))
 
     @allure.step("Is new messages")
@@ -33,14 +35,19 @@ class BasePage(metaclass=MetaLocator):
         sender = self.ui.find(self._SENDER_NAME, wait=True)
         assert expected_sender in sender.text, f"Expected sender: {expected_sender}, but got {sender.text}"
 
-
     def click_menu_item(self, menu_item_locator, submenu_item_locator):
-        # TODO: Доделать проверку на уже открытую страницу
-        submenu_item = self.ui.find(submenu_item_locator)
-        if submenu_item.is_displayed():
-            submenu_item.click()
-        else:
-            self.ui.find(menu_item_locator).click()
-            self.ui.find(submenu_item_locator, wait=True).click()
+        try:
+            # Сначала проверяем, виден ли подменю элемент
+            submenu_item = self.ui.find(submenu_item_locator, wait=True)
+            if submenu_item.is_displayed():
+                self.ui.click(submenu_item_locator, "Submenu item")
+            else:
+                # Если подменю не видно, кликаем по основному меню
+                self.ui.click(menu_item_locator, "Main menu item")
+                # Ждем появления подменю и кликаем
+                self.ui.click(submenu_item_locator, "Submenu item after main menu click")
+        except Exception as e:
+            print(f"Error clicking menu items: {str(e)}")
+            raise
 
 

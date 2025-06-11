@@ -3,10 +3,14 @@ from pages.news_feed_page.page import NewsFeedPage
 from base_components.sidebar.sidebar import Sidebar
 from pages.new_business_page.page import CreateNewBusinessPage
 from pages.messages_page.page import MessagesPage
+from helpers.ui_helper import UIHelper
 
 class BaseTest:
 
     def setup_method(self):
+        # Helpers
+        self.ui = UIHelper(self.driver)
+        
         # Pages
         self.login_page = lambda driver=self.driver: LoginPage(driver)
         self.news_feed_page = lambda driver=self.driver: NewsFeedPage(driver)

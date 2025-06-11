@@ -10,11 +10,19 @@ def get_driver():
         options = webdriver.ChromeOptions()
         options.add_argument("--disable-search-engine-choice-screen")
         options.add_argument("--window-size=1920,1080")
+        options.add_argument("--ignore-certificate-errors")
+        options.add_argument("--ignore-ssl-errors")
+        options.add_argument("--allow-insecure-localhost")
         driver = webdriver.Chrome(options=options)
     elif browser == "firefox":
         options = webdriver.FirefoxOptions()
         options.add_argument("--window-size=1920,1080")
         options.add_argument("--disable-search-engine-choice-screen")
+        options.set_preference("security.ssl.enable_ocsp_stapling", False)
+        options.set_preference("security.ssl.enable_false_start", False)
+        options.set_preference("security.ssl.require_safe_negotiation", False)
+        options.set_preference("security.ssl.treat_unsafe_negotiation_as_broken", False)
+        options.set_preference("security.ssl.warn_missing_rfc5746", 0)
         driver = webdriver.Firefox(options=options)
     return driver
 

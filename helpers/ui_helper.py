@@ -48,17 +48,29 @@ class UIHelper(metaclass=MetaLocator):
         element = self.find(locator)
         self.driver.execute_script("arguments[0].click();", element)
 
-    def screenshot(self, name: str =time.time()):
+    def screenshot(self, name: str = None):
         """
-        This method takes a screenshot from browser
-        :param name: name of screenshot
-        :return: None
+        Takes a screenshot and attaches it to the Allure report.
+        
+        Args:
+            name (str, optional): Name for the screenshot. If not provided, will use timestamp.
+                                 You can use format like 'test_name_step_1' for better organization.
+        
+        Returns:
+            None
         """
-        allure.attach(
-            body=self.driver.get_screenshot_as_png(),
-            name=name,
-            attachment_type=allure.attachment_type.PNG
-        )
+        if name is None:
+            name = f"screenshot_{time.strftime('%Y%m%d_%H%M%S')}"
+        
+        try:
+            screenshot = self.driver.get_screenshot_as_png()
+            allure.attach(
+                body=screenshot,
+                name=name,
+                attachment_type=allure.attachment_type.PNG
+            )
+        except Exception as e:
+            print(f"Failed to take screenshot: {str(e)}")
 
     def wait_for_invisibility(self, locator: tuple, message: str = None):
         return self.wait.until(EC.invisibility_of_element(locator), message=message)
