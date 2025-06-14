@@ -1,26 +1,26 @@
 {
   "uid" : "b1a8273437954620fa374b796ffaacdd",
   "children" : [ {
-    "name" : "Connect",
+    "name" : "Login",
     "children" : [ {
-      "name" : "Connect Page",
+      "name" : "Login Page",
       "children" : [ {
-        "name" : "Connect Page Test",
-        "uid" : "ba6cd3e0d53722d7",
-        "parentUid" : "50e9bf1e24109a691686a6828cc83c13",
-        "status" : "broken",
+        "name" : "Login Page Test",
+        "uid" : "a186a0d513c95fbf",
+        "parentUid" : "2b3e9810b76040614d0ecd9d228009d3",
+        "status" : "passed",
         "time" : {
-          "start" : 1749904464254,
-          "stop" : 1749904485511,
-          "duration" : 21257
+          "start" : 1749904724111,
+          "stop" : 1749904729156,
+          "duration" : 5045
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "50e9bf1e24109a691686a6828cc83c13"
+      "uid" : "2b3e9810b76040614d0ecd9d228009d3"
     } ],
-    "uid" : "487d33c0515af62624d7e55da52466a7"
+    "uid" : "14102d61eef2af473312d4f91dec531b"
   } ],
   "name" : "behaviors"
 }
