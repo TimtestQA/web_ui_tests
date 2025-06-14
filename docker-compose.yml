@@ -7,13 +7,12 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./:/usr/workspace
-      - ./allure-results:/usr/workspace/allure-results
+      - ./allure-results:/usr/workspace/result
 
     command:
-      sh -c "BROWSER=$$BROWSER pytest -sv -o log_cli=true --alluredir=allure-results -m login"
+      sh -c "BROWSER=$$BROWSER pytest -sv -o log_cli=true --alluredir=result -m login"
     environment:
       BROWSER: ${BROWSER}
-      PYTHONPATH: /usr/workspace
     tty: true
 
 
@@ -24,13 +23,12 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./:/usr/workspace
-      - ./allure-results:/usr/workspace/allure-results
+      - ./allure-results:/usr/workspace/result
 
     command:
-      sh -c "BROWSER=$$BROWSER pytest -sv -o log_cli=true --alluredir=allure-results -m connect"
+      sh -c "BROWSER=$$BROWSER pytest -sv -o log_cli=true --alluredir=result -m connect"
     environment:
       BROWSER: ${BROWSER}
-      PYTHONPATH: /usr/workspace
     tty: true
 
 

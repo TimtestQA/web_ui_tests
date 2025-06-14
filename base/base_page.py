@@ -41,14 +41,11 @@ class BasePage(metaclass=MetaLocator):
 
     def click_menu_item(self, menu_item_locator, submenu_item_locator):
         try:
-            # Сначала проверяем, виден ли подменю элемент
             submenu_item = self.ui.find(submenu_item_locator, wait=True)
-        if submenu_item.is_displayed():
+            if submenu_item.is_displayed():
                 self.ui.click(submenu_item_locator, "Submenu item")
-        else:
-                # Если подменю не видно, кликаем по основному меню
+            else:
                 self.ui.click(menu_item_locator, "Main menu item")
-                # Ждем появления подменю и кликаем
                 self.ui.click(submenu_item_locator, "Submenu item after main menu click")
         except Exception as e:
             print(f"Error clicking menu items: {str(e)}")

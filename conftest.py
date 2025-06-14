@@ -4,9 +4,9 @@ import requests  # библиотека для HTTP-запросов
 import pytest  # фреймворк для тестирования
 import datetime  # модуль для работы с датой и временем
 
-CHAT_ID_TELEGRAM = "-4986897412" # ID чата в Telegram, куда будут отправляться результаты
-TOKEN_TELEGRAM = "7561480034:AAH3VWBNLWdpUn-q5HJGHop9y0VPtBvwSBA" # Токен бота Telegram, который будет отправлять сообщения
-GITHUB_PAGES_URL = "https://timtestqa.github.io/web_ui_tests/" # URL API GitLab для получения файла с результатами тестов
+CHAT_ID = "-4986897412" # ID чата в Telegram, куда будут отправляться результаты
+TOKEN = "7561480034:AAH3VWBNLWdpUn-q5HJGHop9y0VPtBvwSBA" # Токен бота Telegram, который будет отправлять сообщения
+GITHUB_PAGES_URL = "https://timtestqa.github.io/web_ui_tests/" # URL для GitHub Pages
 
 
 def pytest_terminal_summary(terminalreporter):
@@ -57,16 +57,16 @@ def pytest_terminal_summary(terminalreporter):
             continue
             
         message += (
-            f"*Сьют:* `{suite}`\n\n"
-            f"✅ *Пройдено:* {results['passed']}\n\n"
-            f"❌ *Не пройдено:* {results['failed']}\n\n"
-            f"⏭ *Пропущено:* {results['skipped']}\n\n"
-            f"⚠️ *Ошибки:* {results['errors']}\n\n"
+            f"*Сьют:* `{suite}`\n"
+            f"✅ *Пройдено:* {results['passed']}\n"
+            f"❌ *Не пройдено:* {results['failed']}\n"
+            f"⏭ *Пропущено:* {results['skipped']}\n"
+            f"⚠️ *Ошибки:* {results['errors']}\n"
             f"-----------------------------\n\n"
         )
 
-    # Добавляем ссылку на GitLab
-    message += f"[Подробнее на GitLab Pages]({GITLAB_URL})"
+    # Добавляем ссылку на GitHub Pages
+    message += f"[Подробнее на GitHub Pages]({GITHUB_PAGES_URL})"
 
     try:
         # Отправляем POST-запрос к Telegram Bot API

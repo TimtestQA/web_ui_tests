@@ -64,11 +64,11 @@ class UIHelper(metaclass=MetaLocator):
         
         try:
             screenshot = self.driver.get_screenshot_as_png()
-        allure.attach(
+            allure.attach(
                 body=screenshot,
-            name=name,
-            attachment_type=allure.attachment_type.PNG
-        )
+                name=name,
+                attachment_type=allure.attachment_type.PNG
+            )
         except Exception as e:
             print(f"Failed to take screenshot: {str(e)}")
 
@@ -95,7 +95,6 @@ class UIHelper(metaclass=MetaLocator):
             if message:
                 raise TimeoutException(message)
             raise e
-
 
     def save_cookies(self, cookies_name="temp-cookies"):
         pickle.dump(self.driver.get_cookies(), open(f"cookies/{cookies_name}.pkl", "wb"))
