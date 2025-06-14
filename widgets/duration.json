@@ -1,1 +1,11 @@
-[ ]
+[ {
+  "uid" : "ba6cd3e0d53722d7",
+  "name" : "Connect Page Test",
+  "time" : {
+    "start" : 1749904464254,
+    "stop" : 1749904485511,
+    "duration" : 21257
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]

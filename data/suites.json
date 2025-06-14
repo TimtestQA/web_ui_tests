@@ -1,5 +1,30 @@
 {
   "uid" : "98d3104e051c652961429bf95fa0b5d6",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "tests",
+    "children" : [ {
+      "name" : "test_connect",
+      "children" : [ {
+        "name" : "TestConnect",
+        "children" : [ {
+          "name" : "Connect Page Test",
+          "uid" : "ba6cd3e0d53722d7",
+          "parentUid" : "f922c90726370ea37263469ed929608e",
+          "status" : "broken",
+          "time" : {
+            "start" : 1749904464254,
+            "stop" : 1749904485511,
+            "duration" : 21257
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "f922c90726370ea37263469ed929608e"
+      } ],
+      "uid" : "a995db1c74fdd636baac6c302e42249f"
+    } ],
+    "uid" : "e387fa4bb326b54ea8c19c2822aba374"
+  } ],
   "name" : "suites"
 }
