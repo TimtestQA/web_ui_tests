@@ -1,7 +1,7 @@
 from base.base_test import BaseTest
 import allure
 import pytest
-from pages.login_page import components
+from pages.login_page.page import *
 
 
 @allure.epic("Login")
