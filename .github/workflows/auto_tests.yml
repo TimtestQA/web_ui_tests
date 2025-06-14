@@ -1,0 +1,92 @@
+name: 🖼️ UI Tests
+run-name: 🖼️ UI Test ${{ github.event.inputs.STAGE }} | ${{ github.event.inputs.MARKER }} marker | ${{ github.event.inputs.THREADS }} threads 
+  | ${{ github.event.inputs.BROWSER }} browser
+
+on:
+  workflow_dispatch:
+    inputs:
+      ENV:
+        description: 'Choose environment to run tests'
+        required: true
+        type: environment
+      MARKER:
+        description: 'Select test marker'
+        required: true
+        default: 'smoke'
+        type: choice
+        options:
+          - smoke
+          - login
+          - connect
+          - regression
+
+      THREADS:
+        description: 'Number of threads to run tests'
+        required: false
+        default: '1'
+        type: choice
+        options:
+          - '2'
+          - '3'
+          - '4'
+      BROWSER:
+        description: 'Select browser to run tests'
+        required: true
+        default: 'chrome'
+        type: choice
+        options:
+          - chrome
+          - firefox
+          - edge
+
+jobs:
+  ui-tests:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.ENV }}
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+          path: ./.github/pages
+
+      - name: Prepare Allure environment
+        run: |
+          mkdir -p allure-results
+          echo "Branch=${{ github.ref_name }}" > allure-results/environment.properties
+          echo "Commit=${{ github.sha }}" >> allure-results/environment.properties
+          echo "Browser=${{ inputs.BROWSER }}" >> allure-results/environment.properties
+          echo "Environment=${{ secrets.STAGE }}" >> allure-results/environment.properties
+          
+      - name: Run tests via docker-compose
+        env:
+          STAGE: ${{ secrets.STAGE }}
+        run: docker-compose up test
+
+      - name: Copy Allure history
+        run: |
+          mkdir -p allure-results/history
+          if [ -d "./.github/gh-pages/history" ]; then
+            cp -R ./.github/gh-pages/history/* allure-results/history/
+          fi
+
+      # Шаг 5 - Генерация отчета
+      - name: Generate Allure-report
+        env:
+          BROWSER: ${{ inputs.BROWSER }}
+          STAGE: ${{ secrets.STAGE }}
+          CI_COMMIT_REF_NAME: ${{ github.ref_name }}
+          CI_COMMIT_SHORT_SHA: ${{ github.sha }}
+        run: |
+          docker compose up report
+
+      # Шаг 6 - Деплой на gh-pages
+      - name: Deploy to Github Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          token: ${{ secrets.CI_TOKEN }}
+          branch: gh-pages
+          folder: allure-report
+          clean: false

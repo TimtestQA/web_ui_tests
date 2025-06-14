@@ -2,6 +2,7 @@ import os
 import allure
 import pytest
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 
 
 def get_driver():
@@ -9,11 +10,23 @@ def get_driver():
     if browser == "chrome":
         options = webdriver.ChromeOptions()
         options.add_argument("--disable-search-engine-choice-screen")
-        options.add_argument("--window-size=1920,1080")
         options.add_argument("--ignore-certificate-errors")
         options.add_argument("--ignore-ssl-errors")
         options.add_argument("--allow-insecure-localhost")
-        driver = webdriver.Chrome(options=options)
+        options.add_argument("--headless")  # Запускает браузер в режиме без графического интерфейса (удобно для серверов)
+        options.add_argument("--no-sandbox")  # Отключает режим песочницы для предотвращения проблем с правами доступа
+        options.add_argument("--disable-dev-shm-usage")  # Отключает использование общей памяти /dev/shm (для Docker и серверных сред)
+        options.add_argument("--disable-gpu")  # Отключает GPU, необходимое для headless-режима на некоторых системах
+        options.add_argument("--window-size=1920,1080")  # Устанавливает фиксированный размер окна браузера
+        options.add_argument("--disable-blink-features=AutomationControlled")
+        options.add_experimental_option("excludeSwitches", ["enable-automation"])
+        options.add_experimental_option('useAutomationExtension', False)
+        options.page_load_strategy = 'normal'
+        
+        # Явно указываем путь к ChromeDriver
+        service = Service(executable_path='/usr/bin/chromedriver')
+        driver = webdriver.Chrome(service=service, options=options)
+
     elif browser == "firefox":
         options = webdriver.FirefoxOptions()
         options.add_argument("--window-size=1920,1080")
@@ -28,6 +41,11 @@ def get_driver():
 
 @pytest.fixture(autouse=True)
 def driver(request):
+    """
+    Фикстура для создания и управления экземпляром веб-драйвера.
+    Автоматически применяется ко всем тестам (autouse=True).
+    Создает новый драйвер для каждого теста (scope="function").
+    """
     driver = get_driver()
     request.cls.driver = driver
     yield

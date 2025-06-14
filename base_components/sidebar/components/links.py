@@ -13,7 +13,9 @@ class Links(BasePage):
     @allure.step("Open 'News Feed' menu")
     def open_news_feed(self):
         self.click_menu_item(self._LINKS_LINK, self._NEWS_FEED_LOCATOR)
+        return self
 
     def open_messages(self):
         self.click_menu_item(self._LINKS_LINK, self._MESSAGES_LOCATOR)
+        return self
 

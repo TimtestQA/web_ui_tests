@@ -1,0 +1,44 @@
+services:
+
+  login:
+    image: ui-test:v1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/workspace
+      - ./allure-results:/usr/workspace/result
+
+    command:
+      sh -c "BROWSER=$$BROWSER pytest -sv -o log_cli=true --alluredir=result -m login -m connect && allure generate result --clean -o allure-report"
+    environment:
+      BROWSER: ${BROWSER}
+    tty: true
+
+
+  connect:
+    image: ui-test:v1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/workspace
+      - ./allure-results:/usr/workspace/result
+
+    command:
+      sh -c "BROWSER=$$BROWSER pytest -sv -o log_cli=true --alluredir=result -m connect"
+    environment:
+      BROWSER: ${BROWSER}
+    tty: true
+
+
+  report:
+    image: ui:v1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/workspace
+    command: /bin/sh -c "ls -la && allure generate allure-results --clean -o allure-report"
+    working_dir: /usr/workspace
+

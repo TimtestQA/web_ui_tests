@@ -22,3 +22,4 @@ class LoginPage(BasePage):
             self.ui.fill(locator=self._LOGIN_FIELD, text=Credentials.FRIEND_LOGIN, clear=True)
             self.ui.fill(locator=self._PASSWORD_FIELD, text=Credentials.FRIEND_PASSWORD, clear=True)
             self.ui.click(self._LOGIN_BUTTON, "Login button")
+        return self

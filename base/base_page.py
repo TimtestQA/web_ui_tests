@@ -17,23 +17,27 @@ class BasePage(metaclass=MetaLocator):
     @allure.step("Open page")
     def open(self):
         self.driver.get(self._PAGE_URL)
+        return self
 
     @allure.step("Check if page is opened")
     def is_opened(self):
         print(f"Expected URL: {self._PAGE_URL}")
         print(f"Current URL: {self.driver.current_url}")
         self.wait.until(EC.url_to_be(self._PAGE_URL))
+        return self
 
     @allure.step("Is new messages")
     def is_new_messages(self):
         notification = self.ui.find(self._MESSAGE_NOTIFICATION, True)
         if int(notification.text) != 0:
             notification.click()
+        return self
 
     @allure.step("Check message sender")
     def check_message_sender(self, expected_sender):
         sender = self.ui.find(self._SENDER_NAME, wait=True)
         assert expected_sender in sender.text, f"Expected sender: {expected_sender}, but got {sender.text}"
+        return self
 
     def click_menu_item(self, menu_item_locator, submenu_item_locator):
         try:
@@ -49,5 +53,19 @@ class BasePage(metaclass=MetaLocator):
         except Exception as e:
             print(f"Error clicking menu items: {str(e)}")
             raise
+        return self
+
+    def screenshot(self, name):
+        """
+        Takes a screenshot and returns self for method chaining.
+        
+        Args:
+            name (str): Name for the screenshot.
+        
+        Returns:
+            self: Returns self for method chaining.
+        """
+        self.ui.screenshot(name)
+        return self
 
 
