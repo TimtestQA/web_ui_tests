@@ -1,22 +1,22 @@
 {
   "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
   "children" : [ {
-    "name" : "tests.test_login",
+    "name" : "tests.test_connect",
     "children" : [ {
-      "name" : "Login Page Test",
-      "uid" : "a186a0d513c95fbf",
-      "parentUid" : "383153a1e87e9025e9b82f017e857ae3",
-      "status" : "passed",
+      "name" : "Connect Page Test",
+      "uid" : "35747c815441b6e6",
+      "parentUid" : "77cc3326145d24405c277fc47f8eab2a",
+      "status" : "broken",
       "time" : {
-        "start" : 1749904724111,
-        "stop" : 1749904729156,
-        "duration" : 5045
+        "start" : 1749905383451,
+        "stop" : 1749905401745,
+        "duration" : 18294
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     } ],
-    "uid" : "tests.test_login"
+    "uid" : "tests.test_connect"
   } ],
   "name" : "packages"
 }
