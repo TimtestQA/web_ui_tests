@@ -13,6 +13,13 @@ services:
       sh -c "BROWSER=$$BROWSER pytest -sv -o log_cli=true --alluredir=result -m login"
     environment:
       BROWSER: ${BROWSER}
+      ADMIN_LOGIN: ${ADMIN_LOGIN}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+      FRIEND_LOGIN: ${FRIEND_LOGIN}
+      FRIEND_PASSWORD: ${FRIEND_PASSWORD}
+      TG_BOT_TOKEN: ${TG_BOT_TOKEN}
+      TG_CHAT_ID: ${TG_CHAT_ID}
+      GITHUB_PAGES_URL: ${GITHUB_PAGES_URL}
     tty: true
 
 
@@ -29,6 +36,13 @@ services:
       sh -c "BROWSER=$$BROWSER pytest -sv -o log_cli=true --alluredir=result -m connect"
     environment:
       BROWSER: ${BROWSER}
+      ADMIN_LOGIN: ${ADMIN_LOGIN}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+      FRIEND_LOGIN: ${FRIEND_LOGIN}
+      FRIEND_PASSWORD: ${FRIEND_PASSWORD}
+      TG_BOT_TOKEN: ${TG_BOT_TOKEN}
+      TG_CHAT_ID: ${TG_CHAT_ID}
+      GITHUB_PAGES_URL: ${GITHUB_PAGES_URL}
     tty: true
 
 

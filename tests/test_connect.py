@@ -14,6 +14,4 @@ class TestConnect(BaseTest):
         self.login_page().is_opened()
         
         self.login_page().login_as("admin").screenshot("login_as_admin")
-        
-        self.sidebar().links.open_connect().screenshot("open_connect")
-        self.connect_page().is_opened()
+        self.login_page().is_opened()

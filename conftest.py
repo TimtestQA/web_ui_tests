@@ -3,10 +3,12 @@ from fixtures.api_fixtures import *
 import requests  # библиотека для HTTP-запросов
 import pytest  # фреймворк для тестирования
 import datetime  # модуль для работы с датой и временем
+from config.credentials import Credentials
 
-CHAT_ID = "-4986897412" # ID чата в Telegram, куда будут отправляться результаты
-TOKEN = "7561480034:AAH3VWBNLWdpUn-q5HJGHop9y0VPtBvwSBA" # Токен бота Telegram, который будет отправлять сообщения
-GITHUB_PAGES_URL = "https://timtestqa.github.io/web_ui_tests/" # URL для GitHub Pages
+# Получаем переменные из credentials
+TOKEN = Credentials.BOT_TOKEN
+CHAT_ID = Credentials.BOT_ID
+GITHUB_PAGES_URL = Credentials.PAGES_URL
 
 
 def pytest_terminal_summary(terminalreporter):

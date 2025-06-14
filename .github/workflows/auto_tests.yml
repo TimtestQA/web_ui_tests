@@ -63,13 +63,20 @@ jobs:
       - name: Run tests via docker-compose
         env:
           BROWSER: ${{ inputs.BROWSER }}
+          ADMIN_LOGIN: ${{ secrets.ADMIN_LOGIN }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          FRIEND_LOGIN: ${{ secrets.FRIEND_LOGIN }}
+          FRIEND_PASSWORD: ${{ secrets.FRIEND_PASSWORD }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+          GITHUB_PAGES_URL: ${{ secrets.GITHUB_PAGES_URL }}
         run: |
           if [ "${{ inputs.MARKER }}" = "login" ]; then
-            docker compose up login --exit-code-from login
+            docker compose up login --exit-code-from login || true
           elif [ "${{ inputs.MARKER }}" = "connect" ]; then
-            docker compose up connect --exit-code-from connect
+            docker compose up connect --exit-code-from connect || true
           else
-            docker compose up login connect --exit-code-from login connect
+            docker compose up login connect --exit-code-from login connect || true
           fi
 
       - name: Check test results
