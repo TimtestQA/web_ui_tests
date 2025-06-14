@@ -43,9 +43,9 @@ class BasePage(metaclass=MetaLocator):
         try:
             # Сначала проверяем, виден ли подменю элемент
             submenu_item = self.ui.find(submenu_item_locator, wait=True)
-            if submenu_item.is_displayed():
+        if submenu_item.is_displayed():
                 self.ui.click(submenu_item_locator, "Submenu item")
-            else:
+        else:
                 # Если подменю не видно, кликаем по основному меню
                 self.ui.click(menu_item_locator, "Main menu item")
                 # Ждем появления подменю и кликаем

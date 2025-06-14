@@ -1,10 +1,12 @@
-FROM python:3.14.0a1-alpine3.20
+FROM python:3.11-alpine3.20
 
 # Установка необходимых пакетов
 RUN apk update && \
     apk add --no-cache \
     chromium \
     chromium-chromedriver \
+    firefox \
+    firefox-esr \
     wget \
     curl \
     tar \

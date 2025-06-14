@@ -61,9 +61,10 @@ jobs:
           echo "Environment=${{ secrets.STAGE }}" >> allure-results/environment.properties
           
       - name: Run tests via docker-compose
-        env:
-          STAGE: ${{ secrets.STAGE }}
-        run: docker compose up test
+      - env:
+      - BROWSER: ${{ inputs.BROWSER }}
+      - run: |
+      - docker compose up tests
 
       - name: Copy Allure history
         run: |

@@ -10,7 +10,7 @@ services:
       - ./allure-results:/usr/workspace/result
 
     command:
-      sh -c "BROWSER=$$BROWSER pytest -sv -o log_cli=true --alluredir=result -m login -m connect && allure generate result --clean -o allure-report"
+      sh -c "BROWSER=$$BROWSER pytest -sv -o log_cli=true --alluredir=result -m login"
     environment:
       BROWSER: ${BROWSER}
     tty: true
@@ -33,7 +33,7 @@ services:
 
 
   report:
-    image: ui:v1
+    image: ui-test:v1
     build:
       context: .
       dockerfile: Dockerfile
