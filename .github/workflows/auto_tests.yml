@@ -63,7 +63,14 @@ jobs:
       - name: Run tests via docker-compose
         env:
           BROWSER: ${{ inputs.BROWSER }}
-        run: docker compose up tests
+        run: |
+          if [ "${{ inputs.MARKER }}" = "login" ]; then
+            docker compose up login
+          elif [ "${{ inputs.MARKER }}" = "connect" ]; then
+            docker compose up connect
+          else
+            docker compose up login connect
+          fi
 
       - name: Copy Allure history
         run: |
