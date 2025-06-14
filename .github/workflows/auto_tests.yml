@@ -65,11 +65,18 @@ jobs:
           BROWSER: ${{ inputs.BROWSER }}
         run: |
           if [ "${{ inputs.MARKER }}" = "login" ]; then
-            docker compose up login
+            docker compose up login --exit-code-from login
           elif [ "${{ inputs.MARKER }}" = "connect" ]; then
-            docker compose up connect
+            docker compose up connect --exit-code-from connect
           else
-            docker compose up login connect
+            docker compose up login connect --exit-code-from login connect
+          fi
+
+      - name: Check test results
+        run: |
+          if [ ! -d "allure-results" ] || [ -z "$(ls -A allure-results)" ]; then
+            echo "No test results found!"
+            exit 1
           fi
 
       - name: Copy Allure history
@@ -86,9 +93,11 @@ jobs:
           CI_COMMIT_REF_NAME: ${{ github.ref_name }}
           CI_COMMIT_SHORT_SHA: ${{ github.sha }}
         run: |
-          docker compose up report
-          ls -la allure-report || echo "Report directory is empty"
-          ls -la allure-results || echo "Results directory is empty"
+          docker compose up report --exit-code-from report
+          if [ ! -d "allure-report" ] || [ -z "$(ls -A allure-report)" ]; then
+            echo "Report generation failed!"
+            exit 1
+          fi
 
       - name: Deploy to Github Pages
         uses: JamesIves/github-pages-deploy-action@v4
