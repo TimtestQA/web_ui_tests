@@ -69,7 +69,7 @@ jobs:
           FRIEND_PASSWORD: ${{ secrets.FRIEND_PASSWORD }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
-          GITHUB_PAGES_URL: ${{ secrets.GITHUB_PAGES_URL }}
+          GH_PAGES_URL: ${{ secrets.GH_PAGES_URL }}
         run: |
           if [ "${{ inputs.MARKER }}" = "login" ]; then
             docker compose up login --exit-code-from login || true

@@ -11,7 +11,7 @@ class Credentials:
     print("Files in current directory:", os.listdir())
     print("TG_BOT_TOKEN:", os.getenv("TG_BOT_TOKEN"))
     print("TG_CHAT_ID:", os.getenv("TG_CHAT_ID"))
-    print("GITHUB_PAGES_URL:", os.getenv("GITHUB_PAGES_URL"))
+    print("GH_PAGES_URL:", os.getenv("GH_PAGES_URL"))
 
     # FakeWorld123
     FRIEND_LOGIN = os.getenv("FRIEND_LOGIN")
@@ -23,4 +23,4 @@ class Credentials:
     # Bot settings
     BOT_TOKEN = os.getenv("TG_BOT_TOKEN")
     BOT_ID = os.getenv("TG_CHAT_ID")
-    PAGES_URL = os.getenv("GITHUB_PAGES_URL")
+    PAGES_URL = os.getenv("GH_PAGES_URL")

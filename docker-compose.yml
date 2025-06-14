@@ -19,7 +19,7 @@ services:
       FRIEND_PASSWORD: ${FRIEND_PASSWORD}
       TG_BOT_TOKEN: ${TG_BOT_TOKEN}
       TG_CHAT_ID: ${TG_CHAT_ID}
-      GITHUB_PAGES_URL: ${GITHUB_PAGES_URL}
+      GH_PAGES_URL: ${GH_PAGES_URL}
     tty: true
 
 
@@ -42,7 +42,7 @@ services:
       FRIEND_PASSWORD: ${FRIEND_PASSWORD}
       TG_BOT_TOKEN: ${TG_BOT_TOKEN}
       TG_CHAT_ID: ${TG_CHAT_ID}
-      GITHUB_PAGES_URL: ${GITHUB_PAGES_URL}
+      GH_PAGES_URL: ${GH_PAGES_URL}
     tty: true
 
 

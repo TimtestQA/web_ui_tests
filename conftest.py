@@ -8,7 +8,7 @@ from config.credentials import Credentials
 # Получаем переменные из credentials
 TOKEN = Credentials.BOT_TOKEN
 CHAT_ID = Credentials.BOT_ID
-GITHUB_PAGES_URL = Credentials.PAGES_URL
+GH_PAGES_URL = Credentials.PAGES_URL
 
 
 def pytest_terminal_summary(terminalreporter):
@@ -68,7 +68,7 @@ def pytest_terminal_summary(terminalreporter):
         )
 
     # Добавляем ссылку на GitHub Pages
-    message += f"[Подробнее на GitHub Pages]({GITHUB_PAGES_URL})"
+    message += f"[Подробнее на GitHub Pages]({GH_PAGES_URL})"
 
     try:
         # Отправляем POST-запрос к Telegram Bot API
