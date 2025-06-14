@@ -89,8 +89,8 @@ jobs:
       - name: Copy Allure history
         run: |
           mkdir -p allure-results/history
-          if [ -d "./.github/gh-pages/history" ]; then
-            cp -R ./.github/gh-pages/history/* allure-results/history/
+          if [ -d "./.github/pages/history" ]; then
+            cp -R ./.github/pages/history/* allure-results/history/
           fi
 
       - name: Generate Allure-report
@@ -112,4 +112,4 @@ jobs:
           token: ${{ secrets.CI_TOKEN }}
           branch: gh-pages
           folder: allure-report
-          clean: false
+          clean: true
