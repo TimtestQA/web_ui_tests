@@ -14,4 +14,4 @@ class TestConnect(BaseTest):
         self.login_page().is_opened()
         
         self.login_page().login_as("admin").screenshot("login_as_admin")
-        self.login_page().is_opened()
+        self.news_feed_page().is_opened()
