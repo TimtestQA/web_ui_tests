@@ -63,7 +63,7 @@ jobs:
       - name: Run tests via docker-compose
         env:
           STAGE: ${{ secrets.STAGE }}
-        run: docker-compose up test
+        run: docker compose up test
 
       - name: Copy Allure history
         run: |

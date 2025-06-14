@@ -4,9 +4,9 @@ import requests  # библиотека для HTTP-запросов
 import pytest  # фреймворк для тестирования
 import datetime  # модуль для работы с датой и временем
 
-CHAT_ID = "-4986897412" # ID чата в Telegram, куда будут отправляться результаты
-TOKEN = "7561480034:AAH3VWBNLWdpUn-q5HJGHop9y0VPtBvwSBA" # Токен бота Telegram, который будет отправлять сообщения
-GITLAB_URL = "https://gitlab.com/api/v4/projects/42809820/repository/files" # URL API GitLab для получения файла с результатами тестов
+CHAT_ID_TELEGRAM = "-4986897412" # ID чата в Telegram, куда будут отправляться результаты
+TOKEN_TELEGRAM = "7561480034:AAH3VWBNLWdpUn-q5HJGHop9y0VPtBvwSBA" # Токен бота Telegram, который будет отправлять сообщения
+GITHUB_PAGES_URL = "https://gitlab.com/api/v4/projects/42809820/repository/files" # URL API GitLab для получения файла с результатами тестов
 
 
 def pytest_terminal_summary(terminalreporter):
