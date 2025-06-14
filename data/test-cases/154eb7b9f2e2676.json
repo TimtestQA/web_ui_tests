@@ -1,52 +1,52 @@
 {
-  "uid" : "a186a0d513c95fbf",
-  "name" : "Login Page Test",
-  "fullName" : "tests.test_login.TestLogin#test_login_page",
-  "historyId" : "695c9ae26b596960288f0baada020d19",
+  "uid" : "154eb7b9f2e2676",
+  "name" : "Connect Page Test",
+  "fullName" : "tests.test_connect.TestConnect#test_connect_page",
+  "historyId" : "6c734c9be128128a12fc00f056d56beb",
   "time" : {
-    "start" : 1749904724111,
-    "stop" : 1749904729156,
-    "duration" : 5045
+    "start" : 1749906009722,
+    "stop" : 1749906014490,
+    "duration" : 4768
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "_session_faker",
-    "time" : {
-      "start" : 1749904723788,
-      "stop" : 1749904723789,
-      "duration" : 1
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
-    "name" : "_xunit_setup_method_fixture_TestLogin",
-    "time" : {
-      "start" : 1749904724109,
-      "stop" : 1749904724110,
-      "duration" : 1
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
     "name" : "driver",
     "time" : {
-      "start" : 1749904723789,
-      "stop" : 1749904724109,
-      "duration" : 320
+      "start" : 1749906009402,
+      "stop" : 1749906009720,
+      "duration" : 318
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1749906009400,
+      "stop" : 1749906009401,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "_xunit_setup_method_fixture_TestConnect",
+    "time" : {
+      "start" : 1749906009720,
+      "stop" : 1749906009722,
+      "duration" : 2
     },
     "status" : "passed",
     "steps" : [ ],
@@ -62,9 +62,9 @@
     "steps" : [ {
       "name" : "Open page",
       "time" : {
-        "start" : 1749904724112,
-        "stop" : 1749904724881,
-        "duration" : 769
+        "start" : 1749906009723,
+        "stop" : 1749906010870,
+        "duration" : 1147
       },
       "status" : "passed",
       "steps" : [ ],
@@ -77,9 +77,9 @@
     }, {
       "name" : "Check if page is opened",
       "time" : {
-        "start" : 1749904725091,
-        "stop" : 1749904725102,
-        "duration" : 11
+        "start" : 1749906011093,
+        "stop" : 1749906011101,
+        "duration" : 8
       },
       "status" : "passed",
       "steps" : [ ],
@@ -92,9 +92,9 @@
     }, {
       "name" : "Click login button",
       "time" : {
-        "start" : 1749904725103,
-        "stop" : 1749904727184,
-        "duration" : 2081
+        "start" : 1749906011102,
+        "stop" : 1749906014151,
+        "duration" : 3049
       },
       "status" : "passed",
       "steps" : [ ],
@@ -108,26 +108,11 @@
       "stepsCount" : 0,
       "hasContent" : true
     }, {
-      "name" : "Open 'News Feed' menu",
-      "time" : {
-        "start" : 1749904727560,
-        "stop" : 1749904728687,
-        "duration" : 1127
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "stepsCount" : 0,
-      "hasContent" : false
-    }, {
       "name" : "Check if page is opened",
       "time" : {
-        "start" : 1749904729145,
-        "stop" : 1749904729156,
-        "duration" : 11
+        "start" : 1749906014482,
+        "stop" : 1749906014490,
+        "duration" : 8
       },
       "status" : "passed",
       "steps" : [ ],
@@ -139,36 +124,30 @@
       "hasContent" : false
     } ],
     "attachments" : [ {
-      "uid" : "95cedba77299adb7",
+      "uid" : "f62a8709206128e0",
       "name" : "login_page_opened",
-      "source" : "95cedba77299adb7.png",
+      "source" : "f62a8709206128e0.png",
       "type" : "image/png",
-      "size" : 38569
+      "size" : 38710
     }, {
-      "uid" : "da47f69fa41b667a",
+      "uid" : "c5c7d91be45abb4b",
       "name" : "login_as_admin",
-      "source" : "da47f69fa41b667a.png",
+      "source" : "c5c7d91be45abb4b.png",
       "type" : "image/png",
-      "size" : 845847
-    }, {
-      "uid" : "1287bb3eb31ca9b6",
-      "name" : "open_news_feed",
-      "source" : "1287bb3eb31ca9b6.png",
-      "type" : "image/png",
-      "size" : 838885
+      "size" : 845862
     } ],
     "parameters" : [ ],
-    "attachmentsCount" : 3,
+    "attachmentsCount" : 2,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 5,
+    "stepsCount" : 4,
     "hasContent" : true
   },
   "afterStages" : [ {
-    "name" : "_xunit_setup_method_fixture_TestLogin::0",
+    "name" : "driver::0",
     "time" : {
-      "start" : 1749904729157,
-      "stop" : 1749904729157,
-      "duration" : 0
+      "start" : 1749906014491,
+      "stop" : 1749906014564,
+      "duration" : 73
     },
     "status" : "passed",
     "steps" : [ ],
@@ -179,11 +158,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "driver::0",
+    "name" : "_xunit_setup_method_fixture_TestConnect::0",
     "time" : {
-      "start" : 1749904729157,
-      "stop" : 1749904729225,
-      "duration" : 68
+      "start" : 1749906014491,
+      "stop" : 1749906014491,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -196,25 +175,25 @@
   } ],
   "labels" : [ {
     "name" : "epic",
-    "value" : "Login"
+    "value" : "Connect"
   }, {
     "name" : "feature",
-    "value" : "Login Page"
+    "value" : "Connect Page"
   }, {
     "name" : "tag",
-    "value" : "login"
+    "value" : "connect"
   }, {
     "name" : "parentSuite",
     "value" : "tests"
   }, {
     "name" : "suite",
-    "value" : "test_login"
+    "value" : "test_connect"
   }, {
     "name" : "subSuite",
-    "value" : "TestLogin"
+    "value" : "TestConnect"
   }, {
     "name" : "host",
-    "value" : "e79c0a2d50a9"
+    "value" : "5f01f1e6f510"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -226,7 +205,7 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "tests.test_login"
+    "value" : "tests.test_connect"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -239,8 +218,8 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
-    "tags" : [ "login" ]
+    "tags" : [ "connect" ]
   },
-  "source" : "a186a0d513c95fbf.json",
+  "source" : "154eb7b9f2e2676.json",
   "parameterValues" : [ ]
 }
