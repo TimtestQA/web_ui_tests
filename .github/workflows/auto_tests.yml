@@ -63,8 +63,7 @@ jobs:
       - name: Run tests via docker-compose
       - env:
       - BROWSER: ${{ inputs.BROWSER }}
-      - run: |
-      - docker compose up tests
+      - run: docker compose up tests
 
       - name: Copy Allure history
         run: |
