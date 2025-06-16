@@ -19,6 +19,7 @@ on:
           - login
           - connect
           - regression
+          - negative
 
       THREADS:
         description: 'Number of threads to run tests'
@@ -26,6 +27,7 @@ on:
         default: '1'
         type: choice
         options:
+          - '1'
           - '2'
           - '3'
           - '4'
@@ -75,6 +77,8 @@ jobs:
             docker compose up login --exit-code-from login || true
           elif [ "${{ inputs.MARKER }}" = "connect" ]; then
             docker compose up connect --exit-code-from connect || true
+          elif [ "${{ inputs.MARKER }}" = "negative" ]; then
+            docker compose up negative --exit-code-from negative || true
           else
             docker compose up login connect --exit-code-from login connect || true
           fi

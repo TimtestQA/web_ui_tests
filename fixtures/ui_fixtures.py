@@ -61,3 +61,15 @@ def add_users(request): # Фикстура для добавления юзер�
     yield drivers # Переходим к тесту
     for driver in drivers: # После теста закрываем все драйверы, которые были созданы
         driver.quit()
+
+
+@pytest.fixture(autouse=True)
+def take_screenshot_on_failure(request, driver):
+    yield  # Выполняем тест
+    if request.node.rep_call.failed:  # Если тест провалился
+        screenshot = driver.get_screenshot_as_png()  # Делаем скриншот
+        allure.attach(
+            screenshot,
+            name="Screen on failure",
+            attachment_type=allure.attachment_type.PNG
+        )  # Прикрепляем скриншот к отчёту Allure

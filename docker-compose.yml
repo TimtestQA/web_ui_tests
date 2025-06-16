@@ -46,6 +46,29 @@ services:
     tty: true
 
 
+  negative:
+    image: ui-test:v1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/workspace
+      - ./allure-results:/usr/workspace/result
+
+    command:
+      sh -c "BROWSER=$$BROWSER pytest -sv -o log_cli=true --alluredir=result -m negative_login"
+    environment:
+      BROWSER: ${BROWSER}
+      ADMIN_LOGIN: ${ADMIN_LOGIN}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+      FRIEND_LOGIN: ${FRIEND_LOGIN}
+      FRIEND_PASSWORD: ${FRIEND_PASSWORD}
+      TG_BOT_TOKEN: ${TG_BOT_TOKEN}
+      TG_CHAT_ID: ${TG_CHAT_ID}
+      GH_PAGES_URL: ${GH_PAGES_URL}
+    tty: true
+
+
   report:
     image: ui-test:v1
     build:
