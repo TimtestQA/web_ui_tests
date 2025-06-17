@@ -4,6 +4,12 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 
+@pytest.hookimpl(hookwrapper=True)
+def pytest_runtest_makereport(item, call):
+    outcome = yield
+    report = outcome.get_result()
+    if report.when == "call":
+        setattr(item, "rep_" + report.when, report)
 
 def get_driver():
     browser = os.environ["BROWSER"]
@@ -66,7 +72,7 @@ def add_users(request): # Фикстура для добавления юзер�
 @pytest.fixture(autouse=True)
 def take_screenshot_on_failure(request, driver):
     yield  # Выполняем тест
-    if request.node.rep_call.failed:  # Если тест провалился
+    if hasattr(request.node, "rep_call") and request.node.rep_call.failed:  # Если тест провалился
         screenshot = driver.get_screenshot_as_png()  # Делаем скриншот
         allure.attach(
             screenshot,
