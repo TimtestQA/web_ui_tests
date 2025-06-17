@@ -1,20 +1,81 @@
 {
-  "6c734c9be128128a12fc00f056d56beb" : {
+  "5de036941050a545f665b7cb317df4a6" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 0,
+      "broken" : 1,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 0,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "154eb7b9f2e2676",
-      "status" : "passed",
+      "uid" : "ab3993f84ba94ebc",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'UIHelper' object has no attribute 'get_text'",
       "time" : {
-        "start" : 1749906009722,
-        "stop" : 1749906014490,
-        "duration" : 4768
+        "start" : 1750138116372,
+        "stop" : 1750138117937,
+        "duration" : 1565
+      }
+    } ]
+  },
+  "7d9792d1ca7ef03aa652df40a64e76c4" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "3de651fdf7b6cfaa",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'UIHelper' object has no attribute 'get_text'",
+      "time" : {
+        "start" : 1750138100712,
+        "stop" : 1750138102486,
+        "duration" : 1774
+      }
+    } ]
+  },
+  "9f5cc53c380253e5daf3d614b6ce619e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7f1c2320f19d5392",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'UIHelper' object has no attribute 'get_text'",
+      "time" : {
+        "start" : 1750138124750,
+        "stop" : 1750138126469,
+        "duration" : 1719
+      }
+    } ]
+  },
+  "32bd7c51cda1fb9a84f97abe4574fc38" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e9e711b67813fa39",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'UIHelper' object has no attribute 'get_text'",
+      "time" : {
+        "start" : 1750138128878,
+        "stop" : 1750138130535,
+        "duration" : 1657
       }
     } ]
   },
@@ -34,6 +95,405 @@
         "start" : 1749905631217,
         "stop" : 1749905636194,
         "duration" : 4977
+      }
+    } ]
+  },
+  "a1776f183afd6a87548f0f5bf3fb5e5a" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "d4bc24b451ba82d7",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'UIHelper' object has no attribute 'get_text'",
+      "time" : {
+        "start" : 1750138096441,
+        "stop" : 1750138098123,
+        "duration" : 1682
+      }
+    } ]
+  },
+  "b6e99b17688584c615f7c714c0d41281" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "6b976001ad68d0a2",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.TimeoutException: Message:",
+      "time" : {
+        "start" : 1750138058617,
+        "stop" : 1750138076421,
+        "duration" : 17804
+      }
+    } ]
+  },
+  "6fe5fb521d2f3429ef708621c7f17280" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "31672a22b6013a0a",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'UIHelper' object has no attribute 'get_text'",
+      "time" : {
+        "start" : 1750138102930,
+        "stop" : 1750138104704,
+        "duration" : 1774
+      }
+    } ]
+  },
+  "22111ff0def993ffb6eff29c20578bba" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "979157ce2f9b8e67",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'UIHelper' object has no attribute 'get_text'",
+      "time" : {
+        "start" : 1750138122706,
+        "stop" : 1750138124348,
+        "duration" : 1642
+      }
+    } ]
+  },
+  "0c34047136d28c97359efdef1e3b3bb4" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "729129ab6c98f675",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'UIHelper' object has no attribute 'get_text'",
+      "time" : {
+        "start" : 1750138133020,
+        "stop" : 1750138134636,
+        "duration" : 1616
+      }
+    } ]
+  },
+  "e72928711cbcb4215485b489b77c0a68" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "24fbc30104337728",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'UIHelper' object has no attribute 'get_text'",
+      "time" : {
+        "start" : 1750138135054,
+        "stop" : 1750138136737,
+        "duration" : 1683
+      }
+    } ]
+  },
+  "03dbe94fcc4e336e3a519ea3caf030d2" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b93bb5eaa16fc694",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'UIHelper' object has no attribute 'get_text'",
+      "time" : {
+        "start" : 1750138120539,
+        "stop" : 1750138122314,
+        "duration" : 1775
+      }
+    } ]
+  },
+  "fb840bfbf9018100514ffabe0a803208" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "c67bd799c58f3420",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'UIHelper' object has no attribute 'get_text'",
+      "time" : {
+        "start" : 1750138094308,
+        "stop" : 1750138096028,
+        "duration" : 1720
+      }
+    } ]
+  },
+  "030a789bfb8155d984c9178e5ebe723a" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "94e4a4c77b1f95c0",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'UIHelper' object has no attribute 'get_text'",
+      "time" : {
+        "start" : 1750138098525,
+        "stop" : 1750138100316,
+        "duration" : 1791
+      }
+    } ]
+  },
+  "6c734c9be128128a12fc00f056d56beb" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "154eb7b9f2e2676",
+      "status" : "passed",
+      "time" : {
+        "start" : 1749906009722,
+        "stop" : 1749906014490,
+        "duration" : 4768
+      }
+    } ]
+  },
+  "6fe4b1145976f1a99c658e5e30c6a4ae" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "fc1090c565b5b139",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'UIHelper' object has no attribute 'get_text'",
+      "time" : {
+        "start" : 1750138112098,
+        "stop" : 1750138113894,
+        "duration" : 1796
+      }
+    } ]
+  },
+  "1299485b777edc82ab9d5f59748ee185" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "486ffd3a467e7a64",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'UIHelper' object has no attribute 'get_text'",
+      "time" : {
+        "start" : 1750138114319,
+        "stop" : 1750138115966,
+        "duration" : 1647
+      }
+    } ]
+  },
+  "f3ba35e45bf0d88d966e20dbb88d8068" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "f63c12395650eb0",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'UIHelper' object has no attribute 'get_text'",
+      "time" : {
+        "start" : 1750138118340,
+        "stop" : 1750138120133,
+        "duration" : 1793
+      }
+    } ]
+  },
+  "ba2dbedec49998b0248c50ba0338e834" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "cbfa8a351b13075c",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'UIHelper' object has no attribute 'get_text'",
+      "time" : {
+        "start" : 1750138126875,
+        "stop" : 1750138128459,
+        "duration" : 1584
+      }
+    } ]
+  },
+  "934328e42aa0ae5e3ebbc2f3f5ac5fe5" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "9f86ba269554915d",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'UIHelper' object has no attribute 'get_text'",
+      "time" : {
+        "start" : 1750138130954,
+        "stop" : 1750138132615,
+        "duration" : 1661
+      }
+    } ]
+  },
+  "87a18cac0717afae9505111ae7610839" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "59d3aaefe2ecd73",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'UIHelper' object has no attribute 'get_text'",
+      "time" : {
+        "start" : 1750138105104,
+        "stop" : 1750138106850,
+        "duration" : 1746
+      }
+    } ]
+  },
+  "c5831005c463ce7148d2ffb3cf598a7e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "ea234e1c8c080d1",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'UIHelper' object has no attribute 'get_text'",
+      "time" : {
+        "start" : 1750138137143,
+        "stop" : 1750138138739,
+        "duration" : 1596
+      }
+    } ]
+  },
+  "76fd6061d670e2e5e4d1ce2ca85a5cb1" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "79bba6589e910fb2",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'UIHelper' object has no attribute 'get_text'",
+      "time" : {
+        "start" : 1750138109862,
+        "stop" : 1750138111674,
+        "duration" : 1812
+      }
+    } ]
+  },
+  "1ffcf92efa81b39bffff0e9e2e1d026e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "a7ccf4a8feb89397",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.TimeoutException: Message:",
+      "time" : {
+        "start" : 1750138076872,
+        "stop" : 1750138093912,
+        "duration" : 17040
+      }
+    } ]
+  },
+  "0ac6696fca623a4f617aabbceab5f2e9" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "d54e277911607e14",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'UIHelper' object has no attribute 'get_text'",
+      "time" : {
+        "start" : 1750138107253,
+        "stop" : 1750138109455,
+        "duration" : 2202
       }
     } ]
   }

@@ -1,26 +1,312 @@
 {
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "children" : [ {
-    "name" : "5f01f1e6f510",
+    "name" : "afe10b5e29e1",
     "children" : [ {
       "name" : "1-MainThread",
       "children" : [ {
-        "name" : "Connect Page Test",
-        "uid" : "154eb7b9f2e2676",
-        "parentUid" : "9a4df954c85a1a883a3ed113ca41fb4f",
-        "status" : "passed",
+        "name" : "test_login[ admin@example.com-Admin123!-This value should be a valid email-False]",
+        "uid" : "9f86ba269554915d",
+        "parentUid" : "49a77ea5c217e1b4bbcdaad9052db06f",
+        "status" : "broken",
         "time" : {
-          "start" : 1749906009722,
-          "stop" : 1749906014490,
-          "duration" : 4768
+          "start" : 1750138130954,
+          "stop" : 1750138132615,
+          "duration" : 1661
         },
         "flaky" : false,
         "newFailed" : false,
-        "parameters" : [ ]
+        "parameters" : [ "' admin@example.com'", "'This value should be a valid email'", "False", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[friend@example.com-Friend123!-None-True]",
+        "uid" : "a7ccf4a8feb89397",
+        "parentUid" : "49a77ea5c217e1b4bbcdaad9052db06f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750138076872,
+          "stop" : 1750138093912,
+          "duration" : 17040
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'friend@example.com'", "None", "True", "'Friend123!'" ]
+      }, {
+        "name" : "test_login[admin@example-Admin123!-This value should be a valid email-False]",
+        "uid" : "3de651fdf7b6cfaa",
+        "parentUid" : "49a77ea5c217e1b4bbcdaad9052db06f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750138100712,
+          "stop" : 1750138102486,
+          "duration" : 1774
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example'", "'This value should be a valid email'", "False", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[admin@example.com-admin-Invalid credentials-False]",
+        "uid" : "ab3993f84ba94ebc",
+        "parentUid" : "49a77ea5c217e1b4bbcdaad9052db06f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750138116372,
+          "stop" : 1750138117937,
+          "duration" : 1565
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example.com'", "'Invalid credentials'", "False", "'admin'" ]
+      }, {
+        "name" : "test_login[admin.example.com-Admin123!-This value should be a valid email-False]",
+        "uid" : "94e4a4c77b1f95c0",
+        "parentUid" : "49a77ea5c217e1b4bbcdaad9052db06f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750138098525,
+          "stop" : 1750138100316,
+          "duration" : 1791
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin.example.com'", "'This value should be a valid email'", "False", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[admin@.com-Admin123!-This value should be a valid email-False]",
+        "uid" : "31672a22b6013a0a",
+        "parentUid" : "49a77ea5c217e1b4bbcdaad9052db06f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750138102930,
+          "stop" : 1750138104704,
+          "duration" : 1774
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@.com'", "'This value should be a valid email'", "False", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[admin@example..com-Admin123!-This value should be a valid email-False]",
+        "uid" : "59d3aaefe2ecd73",
+        "parentUid" : "49a77ea5c217e1b4bbcdaad9052db06f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750138105104,
+          "stop" : 1750138106850,
+          "duration" : 1746
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example..com'", "'This value should be a valid email'", "False", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[-Admin123!-This value is required-False]",
+        "uid" : "d54e277911607e14",
+        "parentUid" : "49a77ea5c217e1b4bbcdaad9052db06f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750138107253,
+          "stop" : 1750138109455,
+          "duration" : 2202
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "''", "'This value is required'", "False", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[admin@example.com-Admin123!-None-True]",
+        "uid" : "6b976001ad68d0a2",
+        "parentUid" : "49a77ea5c217e1b4bbcdaad9052db06f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750138058617,
+          "stop" : 1750138076421,
+          "duration" : 17804
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example.com'", "None", "True", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[admin@example.com-12345678-Invalid credentials-False]",
+        "uid" : "f63c12395650eb0",
+        "parentUid" : "49a77ea5c217e1b4bbcdaad9052db06f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750138118340,
+          "stop" : 1750138120133,
+          "duration" : 1793
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example.com'", "'Invalid credentials'", "False", "'12345678'" ]
+      }, {
+        "name" : "test_login[--This value is required-False]",
+        "uid" : "fc1090c565b5b139",
+        "parentUid" : "49a77ea5c217e1b4bbcdaad9052db06f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750138112098,
+          "stop" : 1750138113894,
+          "duration" : 1796
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "''", "'This value is required'", "False", "''" ]
+      }, {
+        "name" : "test_login[admin@example.com-Admin123!' OR '1'='1-Invalid credentials-False]",
+        "uid" : "979157ce2f9b8e67",
+        "parentUid" : "49a77ea5c217e1b4bbcdaad9052db06f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750138122706,
+          "stop" : 1750138124348,
+          "duration" : 1642
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example.com'", "'Invalid credentials'", "False", "'Admin123!' OR '1'='1'" ]
+      }, {
+        "name" : "test_login[admin@-Admin123!-This value should be a valid email-False]",
+        "uid" : "c67bd799c58f3420",
+        "parentUid" : "49a77ea5c217e1b4bbcdaad9052db06f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750138094308,
+          "stop" : 1750138096028,
+          "duration" : 1720
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@'", "'This value should be a valid email'", "False", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[admin@example.com- Admin123!-Invalid credentials-False]",
+        "uid" : "24fbc30104337728",
+        "parentUid" : "49a77ea5c217e1b4bbcdaad9052db06f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750138135054,
+          "stop" : 1750138136737,
+          "duration" : 1683
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example.com'", "'Invalid credentials'", "False", "' Admin123!'" ]
+      }, {
+        "name" : "test_login[admin@example.com -Admin123!-This value should be a valid email-False]",
+        "uid" : "729129ab6c98f675",
+        "parentUid" : "49a77ea5c217e1b4bbcdaad9052db06f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750138133020,
+          "stop" : 1750138134636,
+          "duration" : 1616
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example.com '", "'This value should be a valid email'", "False", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[@example.com-Admin123!-This value should be a valid email-False]",
+        "uid" : "d4bc24b451ba82d7",
+        "parentUid" : "49a77ea5c217e1b4bbcdaad9052db06f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750138096441,
+          "stop" : 1750138098123,
+          "duration" : 1682
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'@example.com'", "'This value should be a valid email'", "False", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[<script>alert('xss')</script>@example.com-Admin123!-This value should be a valid email-False]",
+        "uid" : "7f1c2320f19d5392",
+        "parentUid" : "49a77ea5c217e1b4bbcdaad9052db06f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750138124750,
+          "stop" : 1750138126469,
+          "duration" : 1719
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'<script>alert('xss')</script>@example.com'", "'This value should be a valid email'", "False", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[admin@example.com-Admin!@#$%^&*()-Invalid credentials-False]",
+        "uid" : "e9e711b67813fa39",
+        "parentUid" : "49a77ea5c217e1b4bbcdaad9052db06f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750138128878,
+          "stop" : 1750138130535,
+          "duration" : 1657
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example.com'", "'Invalid credentials'", "False", "'Admin!@#$%^&*()'" ]
+      }, {
+        "name" : "test_login[admin@example.com-WrongPass123!-Invalid credentials-False]",
+        "uid" : "486ffd3a467e7a64",
+        "parentUid" : "49a77ea5c217e1b4bbcdaad9052db06f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750138114319,
+          "stop" : 1750138115966,
+          "duration" : 1647
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example.com'", "'Invalid credentials'", "False", "'WrongPass123!'" ]
+      }, {
+        "name" : "test_login[admin@example.com-Admin123! -Invalid credentials-False]",
+        "uid" : "ea234e1c8c080d1",
+        "parentUid" : "49a77ea5c217e1b4bbcdaad9052db06f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750138137143,
+          "stop" : 1750138138739,
+          "duration" : 1596
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example.com'", "'Invalid credentials'", "False", "'Admin123! '" ]
+      }, {
+        "name" : "test_login[admin@example.com--This value is required-False]",
+        "uid" : "79bba6589e910fb2",
+        "parentUid" : "49a77ea5c217e1b4bbcdaad9052db06f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750138109862,
+          "stop" : 1750138111674,
+          "duration" : 1812
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example.com'", "'This value is required'", "False", "''" ]
+      }, {
+        "name" : "test_login[admin!@example.com-Admin123!-This value should be a valid email-False]",
+        "uid" : "cbfa8a351b13075c",
+        "parentUid" : "49a77ea5c217e1b4bbcdaad9052db06f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750138126875,
+          "stop" : 1750138128459,
+          "duration" : 1584
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin!@example.com'", "'This value should be a valid email'", "False", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[admin@example.com' OR '1'='1-Admin123!-This value should be a valid email-False]",
+        "uid" : "b93bb5eaa16fc694",
+        "parentUid" : "49a77ea5c217e1b4bbcdaad9052db06f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750138120539,
+          "stop" : 1750138122314,
+          "duration" : 1775
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example.com' OR '1'='1'", "'This value should be a valid email'", "False", "'Admin123!'" ]
       } ],
-      "uid" : "9a4df954c85a1a883a3ed113ca41fb4f"
+      "uid" : "49a77ea5c217e1b4bbcdaad9052db06f"
     } ],
-    "uid" : "4f9e92e3b214370952a75cee52d76968"
+    "uid" : "6761cf58450b4b5135c7bc54b5704150"
   } ],
   "name" : "timeline"
 }

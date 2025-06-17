@@ -1,11 +1,231 @@
 [ {
-  "uid" : "154eb7b9f2e2676",
-  "name" : "Connect Page Test",
+  "uid" : "31672a22b6013a0a",
+  "name" : "test_login[admin@.com-Admin123!-This value should be a valid email-False]",
   "time" : {
-    "start" : 1749906009722,
-    "stop" : 1749906014490,
-    "duration" : 4768
+    "start" : 1750138102930,
+    "stop" : 1750138104704,
+    "duration" : 1774
   },
-  "status" : "passed",
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "fc1090c565b5b139",
+  "name" : "test_login[--This value is required-False]",
+  "time" : {
+    "start" : 1750138112098,
+    "stop" : 1750138113894,
+    "duration" : 1796
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "c67bd799c58f3420",
+  "name" : "test_login[admin@-Admin123!-This value should be a valid email-False]",
+  "time" : {
+    "start" : 1750138094308,
+    "stop" : 1750138096028,
+    "duration" : 1720
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "24fbc30104337728",
+  "name" : "test_login[admin@example.com- Admin123!-Invalid credentials-False]",
+  "time" : {
+    "start" : 1750138135054,
+    "stop" : 1750138136737,
+    "duration" : 1683
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "979157ce2f9b8e67",
+  "name" : "test_login[admin@example.com-Admin123!' OR '1'='1-Invalid credentials-False]",
+  "time" : {
+    "start" : 1750138122706,
+    "stop" : 1750138124348,
+    "duration" : 1642
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "f63c12395650eb0",
+  "name" : "test_login[admin@example.com-12345678-Invalid credentials-False]",
+  "time" : {
+    "start" : 1750138118340,
+    "stop" : 1750138120133,
+    "duration" : 1793
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "6b976001ad68d0a2",
+  "name" : "test_login[admin@example.com-Admin123!-None-True]",
+  "time" : {
+    "start" : 1750138058617,
+    "stop" : 1750138076421,
+    "duration" : 17804
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "d4bc24b451ba82d7",
+  "name" : "test_login[@example.com-Admin123!-This value should be a valid email-False]",
+  "time" : {
+    "start" : 1750138096441,
+    "stop" : 1750138098123,
+    "duration" : 1682
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "ab3993f84ba94ebc",
+  "name" : "test_login[admin@example.com-admin-Invalid credentials-False]",
+  "time" : {
+    "start" : 1750138116372,
+    "stop" : 1750138117937,
+    "duration" : 1565
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "e9e711b67813fa39",
+  "name" : "test_login[admin@example.com-Admin!@#$%^&*()-Invalid credentials-False]",
+  "time" : {
+    "start" : 1750138128878,
+    "stop" : 1750138130535,
+    "duration" : 1657
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "d54e277911607e14",
+  "name" : "test_login[-Admin123!-This value is required-False]",
+  "time" : {
+    "start" : 1750138107253,
+    "stop" : 1750138109455,
+    "duration" : 2202
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "7f1c2320f19d5392",
+  "name" : "test_login[<script>alert('xss')</script>@example.com-Admin123!-This value should be a valid email-False]",
+  "time" : {
+    "start" : 1750138124750,
+    "stop" : 1750138126469,
+    "duration" : 1719
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "cbfa8a351b13075c",
+  "name" : "test_login[admin!@example.com-Admin123!-This value should be a valid email-False]",
+  "time" : {
+    "start" : 1750138126875,
+    "stop" : 1750138128459,
+    "duration" : 1584
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "59d3aaefe2ecd73",
+  "name" : "test_login[admin@example..com-Admin123!-This value should be a valid email-False]",
+  "time" : {
+    "start" : 1750138105104,
+    "stop" : 1750138106850,
+    "duration" : 1746
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "b93bb5eaa16fc694",
+  "name" : "test_login[admin@example.com' OR '1'='1-Admin123!-This value should be a valid email-False]",
+  "time" : {
+    "start" : 1750138120539,
+    "stop" : 1750138122314,
+    "duration" : 1775
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "729129ab6c98f675",
+  "name" : "test_login[admin@example.com -Admin123!-This value should be a valid email-False]",
+  "time" : {
+    "start" : 1750138133020,
+    "stop" : 1750138134636,
+    "duration" : 1616
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "486ffd3a467e7a64",
+  "name" : "test_login[admin@example.com-WrongPass123!-Invalid credentials-False]",
+  "time" : {
+    "start" : 1750138114319,
+    "stop" : 1750138115966,
+    "duration" : 1647
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "94e4a4c77b1f95c0",
+  "name" : "test_login[admin.example.com-Admin123!-This value should be a valid email-False]",
+  "time" : {
+    "start" : 1750138098525,
+    "stop" : 1750138100316,
+    "duration" : 1791
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "3de651fdf7b6cfaa",
+  "name" : "test_login[admin@example-Admin123!-This value should be a valid email-False]",
+  "time" : {
+    "start" : 1750138100712,
+    "stop" : 1750138102486,
+    "duration" : 1774
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "9f86ba269554915d",
+  "name" : "test_login[ admin@example.com-Admin123!-This value should be a valid email-False]",
+  "time" : {
+    "start" : 1750138130954,
+    "stop" : 1750138132615,
+    "duration" : 1661
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "a7ccf4a8feb89397",
+  "name" : "test_login[friend@example.com-Friend123!-None-True]",
+  "time" : {
+    "start" : 1750138076872,
+    "stop" : 1750138093912,
+    "duration" : 17040
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "ea234e1c8c080d1",
+  "name" : "test_login[admin@example.com-Admin123! -Invalid credentials-False]",
+  "time" : {
+    "start" : 1750138137143,
+    "stop" : 1750138138739,
+    "duration" : 1596
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "79bba6589e910fb2",
+  "name" : "test_login[admin@example.com--This value is required-False]",
+  "time" : {
+    "start" : 1750138109862,
+    "stop" : 1750138111674,
+    "duration" : 1812
+  },
+  "status" : "broken",
   "severity" : "normal"
 } ]
