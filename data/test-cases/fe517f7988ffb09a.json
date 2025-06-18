@@ -1,0 +1,254 @@
+{
+  "uid" : "fe517f7988ffb09a",
+  "name" : "test_login[admin@example.com--False]",
+  "fullName" : "tests.test_login.TestLoginIncorrectData#test_login",
+  "historyId" : "05f5820e5d4818185fe1ddad3dcd6d5d",
+  "time" : {
+    "start" : 1750235806669,
+    "stop" : 1750235823632,
+    "duration" : 16963
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Expected an error message, but got None\nassert None is not None",
+  "statusTrace" : "self = <test_login.TestLoginIncorrectData object at 0x7f1f1747ed50>\nemail = 'admin@example.com', password = '', expected_result = False\n\n    @pytest.mark.negative_login\n    @pytest.mark.parametrize(\n        \"email, password, expected_result\", [\n            # Валидные данные\n            (\"admin@example.com\", \"Admin123!\", True),\n            (\"friend@example.com\", \"Friend123!\", True),\n    \n            # Невалидный email\n            (\"admin@\", \"Admin123!\", False),\n            (\"@example.com\", \"Admin123!\", False),\n            (\"admin.example.com\", \"Admin123!\", False),\n            (\"admin@example\", \"Admin123!\", False),\n            (\"admin@.com\", \"Admin123!\", False),\n            (\"admin@example..com\", \"Admin123!\", False),\n    \n            # Пустые поля\n            (\"\", \"Admin123!\", False),\n            (\"admin@example.com\", \"\", False),\n            (\"\", \"\", False),\n    \n            # Неверный пароль\n            (\"admin@example.com\", \"WrongPass123!\", False),\n            (\"admin@example.com\", \"admin\", False),\n            (\"admin@example.com\", \"12345678\", False),\n    \n            # XSS и SQL инъекции\n            (\"admin@example.com' OR '1'='1\", \"Admin123!\", False),\n            (\"admin@example.com\", \"Admin123!' OR '1'='1\", False),\n            (\"<script>alert('xss')</script>@example.com\", \"Admin123!\", False),\n    \n            # Специальные символы\n            (\"admin!@example.com\", \"Admin123!\", False),\n            (\"admin@example.com\", \"Admin!@#$%^&*()\", False),\n    \n            # Пробелы\n            (\" admin@example.com\", \"Admin123!\", False),\n            (\"admin@example.com \", \"Admin123!\", False),\n            (\"admin@example.com\", \" Admin123!\", False),\n            (\"admin@example.com\", \"Admin123! \", False),\n        ]\n    )\n    def test_login(self, email, password, expected_result):\n        try:\n            self.login_page().open().screenshot(\"login_page_opened\")\n            self.login_page().is_opened()\n    \n            self.login_page().ui.fill(locator=self.login_page()._LOGIN_FIELD, text=email, clear=True)\n            self.login_page().ui.fill(locator=self.login_page()._PASSWORD_FIELD, text=password, clear=True)\n            self.login_page().ui.click(locator=self.login_page()._LOGIN_BUTTON)\n    \n            if not expected_result:\n                actual_error = self.login_page().get_error_message()\n>               assert actual_error is not None, \"Expected an error message, but got None\"\nE               AssertionError: Expected an error message, but got None\nE               assert None is not None\n\ntests/test_login.py:120: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1750235806377,
+      "stop" : 1750235806665,
+      "duration" : 288
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "_xunit_setup_method_fixture_TestLoginIncorrectData",
+    "time" : {
+      "start" : 1750235806666,
+      "stop" : 1750235806668,
+      "duration" : 2
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "take_screenshot_on_failure",
+    "time" : {
+      "start" : 1750235806666,
+      "stop" : 1750235806666,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1750235660281,
+      "stop" : 1750235660282,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Expected an error message, but got None\nassert None is not None",
+    "statusTrace" : "self = <test_login.TestLoginIncorrectData object at 0x7f1f1747ed50>\nemail = 'admin@example.com', password = '', expected_result = False\n\n    @pytest.mark.negative_login\n    @pytest.mark.parametrize(\n        \"email, password, expected_result\", [\n            # Валидные данные\n            (\"admin@example.com\", \"Admin123!\", True),\n            (\"friend@example.com\", \"Friend123!\", True),\n    \n            # Невалидный email\n            (\"admin@\", \"Admin123!\", False),\n            (\"@example.com\", \"Admin123!\", False),\n            (\"admin.example.com\", \"Admin123!\", False),\n            (\"admin@example\", \"Admin123!\", False),\n            (\"admin@.com\", \"Admin123!\", False),\n            (\"admin@example..com\", \"Admin123!\", False),\n    \n            # Пустые поля\n            (\"\", \"Admin123!\", False),\n            (\"admin@example.com\", \"\", False),\n            (\"\", \"\", False),\n    \n            # Неверный пароль\n            (\"admin@example.com\", \"WrongPass123!\", False),\n            (\"admin@example.com\", \"admin\", False),\n            (\"admin@example.com\", \"12345678\", False),\n    \n            # XSS и SQL инъекции\n            (\"admin@example.com' OR '1'='1\", \"Admin123!\", False),\n            (\"admin@example.com\", \"Admin123!' OR '1'='1\", False),\n            (\"<script>alert('xss')</script>@example.com\", \"Admin123!\", False),\n    \n            # Специальные символы\n            (\"admin!@example.com\", \"Admin123!\", False),\n            (\"admin@example.com\", \"Admin!@#$%^&*()\", False),\n    \n            # Пробелы\n            (\" admin@example.com\", \"Admin123!\", False),\n            (\"admin@example.com \", \"Admin123!\", False),\n            (\"admin@example.com\", \" Admin123!\", False),\n            (\"admin@example.com\", \"Admin123! \", False),\n        ]\n    )\n    def test_login(self, email, password, expected_result):\n        try:\n            self.login_page().open().screenshot(\"login_page_opened\")\n            self.login_page().is_opened()\n    \n            self.login_page().ui.fill(locator=self.login_page()._LOGIN_FIELD, text=email, clear=True)\n            self.login_page().ui.fill(locator=self.login_page()._PASSWORD_FIELD, text=password, clear=True)\n            self.login_page().ui.click(locator=self.login_page()._LOGIN_BUTTON)\n    \n            if not expected_result:\n                actual_error = self.login_page().get_error_message()\n>               assert actual_error is not None, \"Expected an error message, but got None\"\nE               AssertionError: Expected an error message, but got None\nE               assert None is not None\n\ntests/test_login.py:120: AssertionError",
+    "steps" : [ {
+      "name" : "Open page",
+      "time" : {
+        "start" : 1750235806670,
+        "stop" : 1750235807402,
+        "duration" : 732
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Check if page is opened",
+      "time" : {
+        "start" : 1750235807627,
+        "stop" : 1750235807635,
+        "duration" : 8
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Get error message",
+      "time" : {
+        "start" : 1750235808395,
+        "stop" : 1750235823631,
+        "duration" : 15236
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "b43bfb720b04cb27",
+      "name" : "login_page_opened",
+      "source" : "b43bfb720b04cb27.png",
+      "type" : "image/png",
+      "size" : 38346
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 3,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1750235823783,
+      "stop" : 1750235823846,
+      "duration" : 63
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "_xunit_setup_method_fixture_TestLoginIncorrectData::0",
+    "time" : {
+      "start" : 1750235823637,
+      "stop" : 1750235823638,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "take_screenshot_on_failure::0",
+    "time" : {
+      "start" : 1750235823638,
+      "stop" : 1750235823783,
+      "duration" : 145
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "8a25053a18c7ac53",
+      "name" : "Screen on failure",
+      "source" : "8a25053a18c7ac53.png",
+      "type" : "image/png",
+      "size" : 201266
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : true
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Login Page"
+  }, {
+    "name" : "epic",
+    "value" : "Login"
+  }, {
+    "name" : "tag",
+    "value" : "negative_login"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_login"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLoginIncorrectData"
+  }, {
+    "name" : "host",
+    "value" : "c348c67a2d70"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "email",
+    "value" : "'admin@example.com'"
+  }, {
+    "name" : "expected_result",
+    "value" : "False"
+  }, {
+    "name" : "password",
+    "value" : "''"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ "negative_login" ]
+  },
+  "source" : "fe517f7988ffb09a.json",
+  "parameterValues" : [ "'admin@example.com'", "False", "''" ]
+}

@@ -1,11 +1,241 @@
 [ {
-  "uid" : "7cd809f0ecb09282",
-  "name" : "Login Page Test",
+  "uid" : "b0300f6738ef24f7",
+  "name" : "test_login[admin@example.com- Admin123!-False]",
   "time" : {
-    "start" : 1750141612508,
-    "stop" : 1750141618136,
-    "duration" : 5628
+    "start" : 1750235864090,
+    "stop" : 1750235865881,
+    "duration" : 1791
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "351ad6db24840d3c",
+  "name" : "test_login[--False]",
+  "time" : {
+    "start" : 1750235824160,
+    "stop" : 1750235841081,
+    "duration" : 16921
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "76d689b1a76cae59",
+  "name" : "test_login[admin@example.com -Admin123!-False]",
+  "time" : {
+    "start" : 1750235861916,
+    "stop" : 1750235863724,
+    "duration" : 1808
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "880de1c86d7f406",
+  "name" : "test_login[admin@example.com-Admin!@#$%^&*()-False]",
+  "time" : {
+    "start" : 1750235857471,
+    "stop" : 1750235859370,
+    "duration" : 1899
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f1efcb4f5ae6cf42",
+  "name" : "test_login[admin@example.com-12345678-False]",
+  "time" : {
+    "start" : 1750235846125,
+    "stop" : 1750235847958,
+    "duration" : 1833
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "225c7dd7dd786417",
+  "name" : "test_login[admin@.com-Admin123!-False]",
+  "time" : {
+    "start" : 1750235784838,
+    "stop" : 1750235786691,
+    "duration" : 1853
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "97461208ac94c114",
+  "name" : "test_login[admin@example.com-admin-False]",
+  "time" : {
+    "start" : 1750235843905,
+    "stop" : 1750235845746,
+    "duration" : 1841
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1e892efe13db5cd4",
+  "name" : "test_login[admin@example.com-Admin123!-True]",
+  "time" : {
+    "start" : 1750235740884,
+    "stop" : 1750235757823,
+    "duration" : 16939
   },
   "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "c788555d4c9edebc",
+  "name" : "test_login[admin@-Admin123!-False]",
+  "time" : {
+    "start" : 1750235775799,
+    "stop" : 1750235777668,
+    "duration" : 1869
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4b1139fa89b6b8dd",
+  "name" : "test_login[@example.com-Admin123!-False]",
+  "time" : {
+    "start" : 1750235778038,
+    "stop" : 1750235779942,
+    "duration" : 1904
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "68450202c6d012cd",
+  "name" : "test_login[<script>alert('xss')</script>@example.com-Admin123!-False]",
+  "time" : {
+    "start" : 1750235852685,
+    "stop" : 1750235854592,
+    "duration" : 1907
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e1c0f8dda8ff7ab6",
+  "name" : "test_login[admin@example.com-Admin123! -False]",
+  "time" : {
+    "start" : 1750235866265,
+    "stop" : 1750235868127,
+    "duration" : 1862
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e8dbf353bcb28d99",
+  "name" : "test_login[admin@example.com' OR '1'='1-Admin123!-False]",
+  "time" : {
+    "start" : 1750235848338,
+    "stop" : 1750235850066,
+    "duration" : 1728
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3c4dd4ec691e2105",
+  "name" : "test_login[admin@example.com-Admin123!' OR '1'='1-False]",
+  "time" : {
+    "start" : 1750235850436,
+    "stop" : 1750235852310,
+    "duration" : 1874
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ca6d12945d4d23a1",
+  "name" : "test_login[ admin@example.com-Admin123!-False]",
+  "time" : {
+    "start" : 1750235859742,
+    "stop" : 1750235861535,
+    "duration" : 1793
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a03198ebef7eada3",
+  "name" : "test_login[admin@example-Admin123!-False]",
+  "time" : {
+    "start" : 1750235782558,
+    "stop" : 1750235784467,
+    "duration" : 1909
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7f9611dd3cad4a26",
+  "name" : "test_login[admin@example..com-Admin123!-False]",
+  "time" : {
+    "start" : 1750235787065,
+    "stop" : 1750235788942,
+    "duration" : 1877
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a57910e62477a32",
+  "name" : "Check actual error messages",
+  "time" : {
+    "start" : 1750235660632,
+    "stop" : 1750235740494,
+    "duration" : 79862
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "56d41351bf833600",
+  "name" : "test_login[admin@example.com-WrongPass123!-False]",
+  "time" : {
+    "start" : 1750235841610,
+    "stop" : 1750235843534,
+    "duration" : 1924
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f1bb00a3c14204b8",
+  "name" : "test_login[admin.example.com-Admin123!-False]",
+  "time" : {
+    "start" : 1750235780308,
+    "stop" : 1750235782183,
+    "duration" : 1875
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3bdac696188fa13f",
+  "name" : "test_login[friend@example.com-Friend123!-True]",
+  "time" : {
+    "start" : 1750235758347,
+    "stop" : 1750235775292,
+    "duration" : 16945
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "1fc240c6c06dfce7",
+  "name" : "test_login[-Admin123!-False]",
+  "time" : {
+    "start" : 1750235789331,
+    "stop" : 1750235806161,
+    "duration" : 16830
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "fe517f7988ffb09a",
+  "name" : "test_login[admin@example.com--False]",
+  "time" : {
+    "start" : 1750235806669,
+    "stop" : 1750235823632,
+    "duration" : 16963
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "3dcf5bb4f5dddc2",
+  "name" : "test_login[admin!@example.com-Admin123!-False]",
+  "time" : {
+    "start" : 1750235854955,
+    "stop" : 1750235856956,
+    "duration" : 2001
+  },
+  "status" : "passed",
   "severity" : "normal"
 } ]

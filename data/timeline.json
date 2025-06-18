@@ -1,26 +1,325 @@
 {
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "children" : [ {
-    "name" : "d115b215cd49",
+    "name" : "c348c67a2d70",
     "children" : [ {
       "name" : "1-MainThread",
       "children" : [ {
-        "name" : "Login Page Test",
-        "uid" : "7cd809f0ecb09282",
-        "parentUid" : "8b1a8a17df6eb7dbb9ed032395fff21d",
-        "status" : "broken",
+        "name" : "test_login[admin@example.com-admin-False]",
+        "uid" : "97461208ac94c114",
+        "parentUid" : "c707f826ae96ca08359477e70520137b",
+        "status" : "passed",
         "time" : {
-          "start" : 1750141612508,
-          "stop" : 1750141618136,
-          "duration" : 5628
+          "start" : 1750235843905,
+          "stop" : 1750235845746,
+          "duration" : 1841
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example.com'", "False", "'admin'" ]
+      }, {
+        "name" : "test_login[@example.com-Admin123!-False]",
+        "uid" : "4b1139fa89b6b8dd",
+        "parentUid" : "c707f826ae96ca08359477e70520137b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750235778038,
+          "stop" : 1750235779942,
+          "duration" : 1904
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'@example.com'", "False", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[<script>alert('xss')</script>@example.com-Admin123!-False]",
+        "uid" : "68450202c6d012cd",
+        "parentUid" : "c707f826ae96ca08359477e70520137b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750235852685,
+          "stop" : 1750235854592,
+          "duration" : 1907
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'<script>alert('xss')</script>@example.com'", "False", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[admin@example.com- Admin123!-False]",
+        "uid" : "b0300f6738ef24f7",
+        "parentUid" : "c707f826ae96ca08359477e70520137b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750235864090,
+          "stop" : 1750235865881,
+          "duration" : 1791
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example.com'", "False", "' Admin123!'" ]
+      }, {
+        "name" : "test_login[-Admin123!-False]",
+        "uid" : "1fc240c6c06dfce7",
+        "parentUid" : "c707f826ae96ca08359477e70520137b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1750235789331,
+          "stop" : 1750235806161,
+          "duration" : 16830
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "''", "False", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[admin@example.com--False]",
+        "uid" : "fe517f7988ffb09a",
+        "parentUid" : "c707f826ae96ca08359477e70520137b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1750235806669,
+          "stop" : 1750235823632,
+          "duration" : 16963
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example.com'", "False", "''" ]
+      }, {
+        "name" : "test_login[admin@example.com' OR '1'='1-Admin123!-False]",
+        "uid" : "e8dbf353bcb28d99",
+        "parentUid" : "c707f826ae96ca08359477e70520137b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750235848338,
+          "stop" : 1750235850066,
+          "duration" : 1728
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example.com' OR '1'='1'", "False", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[admin!@example.com-Admin123!-False]",
+        "uid" : "3dcf5bb4f5dddc2",
+        "parentUid" : "c707f826ae96ca08359477e70520137b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750235854955,
+          "stop" : 1750235856956,
+          "duration" : 2001
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin!@example.com'", "False", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[ admin@example.com-Admin123!-False]",
+        "uid" : "ca6d12945d4d23a1",
+        "parentUid" : "c707f826ae96ca08359477e70520137b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750235859742,
+          "stop" : 1750235861535,
+          "duration" : 1793
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "' admin@example.com'", "False", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[admin@example.com-WrongPass123!-False]",
+        "uid" : "56d41351bf833600",
+        "parentUid" : "c707f826ae96ca08359477e70520137b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750235841610,
+          "stop" : 1750235843534,
+          "duration" : 1924
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example.com'", "False", "'WrongPass123!'" ]
+      }, {
+        "name" : "test_login[admin@example.com-Admin123!' OR '1'='1-False]",
+        "uid" : "3c4dd4ec691e2105",
+        "parentUid" : "c707f826ae96ca08359477e70520137b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750235850436,
+          "stop" : 1750235852310,
+          "duration" : 1874
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example.com'", "False", "'Admin123!' OR '1'='1'" ]
+      }, {
+        "name" : "Check actual error messages",
+        "uid" : "a57910e62477a32",
+        "parentUid" : "c707f826ae96ca08359477e70520137b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750235660632,
+          "stop" : 1750235740494,
+          "duration" : 79862
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
+      }, {
+        "name" : "test_login[admin@example.com-Admin123!-True]",
+        "uid" : "1e892efe13db5cd4",
+        "parentUid" : "c707f826ae96ca08359477e70520137b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750235740884,
+          "stop" : 1750235757823,
+          "duration" : 16939
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example.com'", "True", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[admin@example.com-12345678-False]",
+        "uid" : "f1efcb4f5ae6cf42",
+        "parentUid" : "c707f826ae96ca08359477e70520137b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750235846125,
+          "stop" : 1750235847958,
+          "duration" : 1833
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example.com'", "False", "'12345678'" ]
+      }, {
+        "name" : "test_login[admin@-Admin123!-False]",
+        "uid" : "c788555d4c9edebc",
+        "parentUid" : "c707f826ae96ca08359477e70520137b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750235775799,
+          "stop" : 1750235777668,
+          "duration" : 1869
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@'", "False", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[admin@.com-Admin123!-False]",
+        "uid" : "225c7dd7dd786417",
+        "parentUid" : "c707f826ae96ca08359477e70520137b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750235784838,
+          "stop" : 1750235786691,
+          "duration" : 1853
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@.com'", "False", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[admin.example.com-Admin123!-False]",
+        "uid" : "f1bb00a3c14204b8",
+        "parentUid" : "c707f826ae96ca08359477e70520137b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750235780308,
+          "stop" : 1750235782183,
+          "duration" : 1875
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin.example.com'", "False", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[admin@example..com-Admin123!-False]",
+        "uid" : "7f9611dd3cad4a26",
+        "parentUid" : "c707f826ae96ca08359477e70520137b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750235787065,
+          "stop" : 1750235788942,
+          "duration" : 1877
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example..com'", "False", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[friend@example.com-Friend123!-True]",
+        "uid" : "3bdac696188fa13f",
+        "parentUid" : "c707f826ae96ca08359477e70520137b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750235758347,
+          "stop" : 1750235775292,
+          "duration" : 16945
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'friend@example.com'", "True", "'Friend123!'" ]
+      }, {
+        "name" : "test_login[admin@example.com -Admin123!-False]",
+        "uid" : "76d689b1a76cae59",
+        "parentUid" : "c707f826ae96ca08359477e70520137b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750235861916,
+          "stop" : 1750235863724,
+          "duration" : 1808
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example.com '", "False", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[admin@example-Admin123!-False]",
+        "uid" : "a03198ebef7eada3",
+        "parentUid" : "c707f826ae96ca08359477e70520137b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750235782558,
+          "stop" : 1750235784467,
+          "duration" : 1909
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example'", "False", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[--False]",
+        "uid" : "351ad6db24840d3c",
+        "parentUid" : "c707f826ae96ca08359477e70520137b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1750235824160,
+          "stop" : 1750235841081,
+          "duration" : 16921
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "''", "False", "''" ]
+      }, {
+        "name" : "test_login[admin@example.com-Admin123! -False]",
+        "uid" : "e1c0f8dda8ff7ab6",
+        "parentUid" : "c707f826ae96ca08359477e70520137b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750235866265,
+          "stop" : 1750235868127,
+          "duration" : 1862
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example.com'", "False", "'Admin123! '" ]
+      }, {
+        "name" : "test_login[admin@example.com-Admin!@#$%^&*()-False]",
+        "uid" : "880de1c86d7f406",
+        "parentUid" : "c707f826ae96ca08359477e70520137b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750235857471,
+          "stop" : 1750235859370,
+          "duration" : 1899
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example.com'", "False", "'Admin!@#$%^&*()'" ]
       } ],
-      "uid" : "8b1a8a17df6eb7dbb9ed032395fff21d"
+      "uid" : "c707f826ae96ca08359477e70520137b"
     } ],
-    "uid" : "4d6822b5629c2bdf2ba0c8552f88eb9a"
+    "uid" : "ddb62351d793cf4e9708f3b1f6c1f844"
   } ],
   "name" : "timeline"
 }

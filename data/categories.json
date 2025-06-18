@@ -3,24 +3,84 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "AttributeError: 'Function' object has no attribute 'rep_call'",
+      "name" : "selenium.common.exceptions.TimeoutException: Message:",
       "children" : [ {
-        "name" : "Login Page Test",
-        "uid" : "7cd809f0ecb09282",
-        "parentUid" : "ad0fe218d3911a6dc5675a24d5d46557",
+        "name" : "test_login[admin@example.com-Admin123!-True]",
+        "uid" : "1e892efe13db5cd4",
+        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
         "status" : "broken",
         "time" : {
-          "start" : 1750141612508,
-          "stop" : 1750141618136,
-          "duration" : 5628
+          "start" : 1750235740884,
+          "stop" : 1750235757823,
+          "duration" : 16939
         },
         "flaky" : false,
         "newFailed" : false,
-        "parameters" : [ ]
+        "parameters" : [ "'admin@example.com'", "True", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[friend@example.com-Friend123!-True]",
+        "uid" : "3bdac696188fa13f",
+        "parentUid" : "31bb78a6a95ede3f78b260ed048910d8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1750235758347,
+          "stop" : 1750235775292,
+          "duration" : 16945
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'friend@example.com'", "True", "'Friend123!'" ]
       } ],
-      "uid" : "ad0fe218d3911a6dc5675a24d5d46557"
+      "uid" : "31bb78a6a95ede3f78b260ed048910d8"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: Expected an error message, but got None\nassert None is not None",
+      "children" : [ {
+        "name" : "test_login[-Admin123!-False]",
+        "uid" : "1fc240c6c06dfce7",
+        "parentUid" : "c183be8bec8e9adf93cbcdf488135c69",
+        "status" : "failed",
+        "time" : {
+          "start" : 1750235789331,
+          "stop" : 1750235806161,
+          "duration" : 16830
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "''", "False", "'Admin123!'" ]
+      }, {
+        "name" : "test_login[admin@example.com--False]",
+        "uid" : "fe517f7988ffb09a",
+        "parentUid" : "c183be8bec8e9adf93cbcdf488135c69",
+        "status" : "failed",
+        "time" : {
+          "start" : 1750235806669,
+          "stop" : 1750235823632,
+          "duration" : 16963
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'admin@example.com'", "False", "''" ]
+      }, {
+        "name" : "test_login[--False]",
+        "uid" : "351ad6db24840d3c",
+        "parentUid" : "c183be8bec8e9adf93cbcdf488135c69",
+        "status" : "failed",
+        "time" : {
+          "start" : 1750235824160,
+          "stop" : 1750235841081,
+          "duration" : 16921
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "''", "False", "''" ]
+      } ],
+      "uid" : "c183be8bec8e9adf93cbcdf488135c69"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   } ],
   "name" : "categories"
 }
