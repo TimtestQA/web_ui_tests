@@ -3,13 +3,8 @@ import allure
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+import time
 
-@pytest.hookimpl(hookwrapper=True)
-def pytest_runtest_makereport(item, call):
-    outcome = yield
-    report = outcome.get_result()
-    if report.when == "call":
-        setattr(item, "rep_" + report.when, report)
 
 def get_driver():
     browser = os.environ["BROWSER"]
@@ -43,7 +38,26 @@ def get_driver():
         options.set_preference("security.ssl.treat_unsafe_negotiation_as_broken", False)
         options.set_preference("security.ssl.warn_missing_rfc5746", 0)
         driver = webdriver.Firefox(options=options)
+    
     return driver
+
+@pytest.fixture(autouse=True)
+def take_screenshot_on_failure(request, driver):
+    yield  # Выполняем тест
+    if request.node.rep_call.failed:  # Если тест провалился
+        screenshot = driver.get_screenshot_as_png()  # Делаем скриншот
+        allure.attach(
+            screenshot,
+            name="Screen on failure",
+            attachment_type=allure.attachment_type.PNG
+        )  # Прикрепляем скриншот к отчёту Allure
+
+@pytest.hookimpl(hookwrapper=True)
+def pytest_runtest_makereport(item, call):
+    outcome = yield
+    report = outcome.get_result()
+    if report.when == "call":
+        setattr(item, "rep_" + report.when, report)
 
 @pytest.fixture(autouse=True)
 def driver(request):
@@ -54,7 +68,7 @@ def driver(request):
     """
     driver = get_driver()
     request.cls.driver = driver
-    yield
+    yield driver
     driver.quit()
 
 @pytest.fixture()
@@ -67,15 +81,3 @@ def add_users(request): # Фикстура для добавления юзер�
     yield drivers # Переходим к тесту
     for driver in drivers: # После теста закрываем все драйверы, которые были созданы
         driver.quit()
-
-
-@pytest.fixture(autouse=True)
-def take_screenshot_on_failure(request, driver):
-    yield  # Выполняем тест
-    if hasattr(request.node, "rep_call") and request.node.rep_call.failed:  # Если тест провалился
-        screenshot = driver.get_screenshot_as_png()  # Делаем скриншот
-        allure.attach(
-            screenshot,
-            name="Screen on failure",
-            attachment_type=allure.attachment_type.PNG
-        )  # Прикрепляем скриншот к отчёту Allure

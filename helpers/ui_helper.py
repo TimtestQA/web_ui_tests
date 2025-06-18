@@ -29,6 +29,20 @@ class UIHelper(metaclass=MetaLocator):
         else:
             return self.driver.find_elements(*locator)
 
+    def get_text(self, locator: tuple, wait=False):
+        """
+        Получает текст элемента.
+        
+        Args:
+            locator (tuple): Локатор элемента
+            wait (bool): Нужно ли ждать появления элемента
+            
+        Returns:
+            str: Текст элемента
+        """
+        element = self.find(locator, wait)
+        return element.text
+
     def fill(self, locator: tuple, text: str, clear: bool = False):
         element = self.find(locator)
         if clear:

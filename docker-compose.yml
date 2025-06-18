@@ -10,7 +10,7 @@ services:
       - ./allure-results:/usr/workspace/result
 
     command:
-      sh -c "BROWSER=$$BROWSER pytest -sv -o log_cli=true --alluredir=result -m login"
+      sh -c "BROWSER=$$BROWSER pytest -sv -o log_cli=true --alluredir=result -m login -n 4"
     environment:
       BROWSER: ${BROWSER}
       ADMIN_LOGIN: ${ADMIN_LOGIN}
@@ -33,7 +33,7 @@ services:
       - ./allure-results:/usr/workspace/result
 
     command:
-      sh -c "BROWSER=$$BROWSER pytest -sv -o log_cli=true --alluredir=result -m connect"
+      sh -c "BROWSER=$$BROWSER pytest -sv -o log_cli=true --alluredir=result -m connect -n 4"
     environment:
       BROWSER: ${BROWSER}
       ADMIN_LOGIN: ${ADMIN_LOGIN}
