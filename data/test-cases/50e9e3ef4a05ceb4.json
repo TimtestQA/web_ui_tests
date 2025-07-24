@@ -1,12 +1,12 @@
 {
-  "uid" : "98021565f581662f",
+  "uid" : "50e9e3ef4a05ceb4",
   "name" : "Connect Page Test",
   "fullName" : "tests.test_connect.TestConnect#test_connect_page",
   "historyId" : "6c734c9be128128a12fc00f056d56beb",
   "time" : {
-    "start" : 1753261093347,
-    "stop" : 1753261097533,
-    "duration" : 4186
+    "start" : 1753331160476,
+    "stop" : 1753331164110,
+    "duration" : 3634
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,9 +14,9 @@
   "beforeStages" : [ {
     "name" : "_xunit_setup_method_fixture_TestConnect",
     "time" : {
-      "start" : 1753261093341,
-      "stop" : 1753261093345,
-      "duration" : 4
+      "start" : 1753331160474,
+      "stop" : 1753331160475,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -29,8 +29,8 @@
   }, {
     "name" : "take_screenshot_on_failure",
     "time" : {
-      "start" : 1753261093341,
-      "stop" : 1753261093341,
+      "start" : 1753331160474,
+      "stop" : 1753331160474,
       "duration" : 0
     },
     "status" : "passed",
@@ -44,9 +44,9 @@
   }, {
     "name" : "_session_faker",
     "time" : {
-      "start" : 1753261092865,
-      "stop" : 1753261092868,
-      "duration" : 3
+      "start" : 1753331160147,
+      "stop" : 1753331160149,
+      "duration" : 2
     },
     "status" : "passed",
     "steps" : [ ],
@@ -59,9 +59,9 @@
   }, {
     "name" : "driver",
     "time" : {
-      "start" : 1753261092868,
-      "stop" : 1753261093341,
-      "duration" : 473
+      "start" : 1753331160149,
+      "stop" : 1753331160474,
+      "duration" : 325
     },
     "status" : "passed",
     "steps" : [ ],
@@ -77,9 +77,9 @@
     "steps" : [ {
       "name" : "Open page",
       "time" : {
-        "start" : 1753261093351,
-        "stop" : 1753261094256,
-        "duration" : 905
+        "start" : 1753331160478,
+        "stop" : 1753331161508,
+        "duration" : 1030
       },
       "status" : "passed",
       "steps" : [ ],
@@ -92,8 +92,8 @@
     }, {
       "name" : "Check if page is opened",
       "time" : {
-        "start" : 1753261094604,
-        "stop" : 1753261094613,
+        "start" : 1753331161756,
+        "stop" : 1753331161765,
         "duration" : 9
       },
       "status" : "passed",
@@ -107,9 +107,9 @@
     }, {
       "name" : "Click login button",
       "time" : {
-        "start" : 1753261094616,
-        "stop" : 1753261097051,
-        "duration" : 2435
+        "start" : 1753331161767,
+        "stop" : 1753331163822,
+        "duration" : 2055
       },
       "status" : "passed",
       "steps" : [ ],
@@ -125,8 +125,8 @@
     }, {
       "name" : "Check if page is opened",
       "time" : {
-        "start" : 1753261097525,
-        "stop" : 1753261097533,
+        "start" : 1753331164102,
+        "stop" : 1753331164110,
         "duration" : 8
       },
       "status" : "passed",
@@ -139,17 +139,17 @@
       "hasContent" : false
     } ],
     "attachments" : [ {
-      "uid" : "2d627e84cdffff6e",
+      "uid" : "e5a87217a89f349d",
       "name" : "login_page_opened",
-      "source" : "2d627e84cdffff6e.png",
+      "source" : "e5a87217a89f349d.png",
       "type" : "image/png",
-      "size" : 41278
+      "size" : 38316
     }, {
-      "uid" : "491b0f3610ce792d",
+      "uid" : "e5a6bc6b8c0dca78",
       "name" : "login_as_admin",
-      "source" : "491b0f3610ce792d.png",
+      "source" : "e5a6bc6b8c0dca78.png",
       "type" : "image/png",
-      "size" : 852568
+      "size" : 847243
     } ],
     "parameters" : [ ],
     "attachmentsCount" : 2,
@@ -160,8 +160,8 @@
   "afterStages" : [ {
     "name" : "_xunit_setup_method_fixture_TestConnect::0",
     "time" : {
-      "start" : 1753261097534,
-      "stop" : 1753261097534,
+      "start" : 1753331164110,
+      "stop" : 1753331164110,
       "duration" : 0
     },
     "status" : "passed",
@@ -175,8 +175,8 @@
   }, {
     "name" : "take_screenshot_on_failure::0",
     "time" : {
-      "start" : 1753261097535,
-      "stop" : 1753261097535,
+      "start" : 1753331164111,
+      "stop" : 1753331164111,
       "duration" : 0
     },
     "status" : "passed",
@@ -190,9 +190,9 @@
   }, {
     "name" : "driver::0",
     "time" : {
-      "start" : 1753261097535,
-      "stop" : 1753261097612,
-      "duration" : 77
+      "start" : 1753331164111,
+      "stop" : 1753331164180,
+      "duration" : 69
     },
     "status" : "passed",
     "steps" : [ ],
@@ -223,7 +223,7 @@
     "value" : "TestConnect"
   }, {
     "name" : "host",
-    "value" : "810f4313ae04"
+    "value" : "556be7ad0aee"
   }, {
     "name" : "thread",
     "value" : "8-MainThread"
@@ -253,11 +253,19 @@
         "failed" : 0,
         "broken" : 0,
         "skipped" : 0,
-        "passed" : 2,
+        "passed" : 3,
         "unknown" : 0,
-        "total" : 2
+        "total" : 3
       },
       "items" : [ {
+        "uid" : "98021565f581662f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1753261093347,
+          "stop" : 1753261097533,
+          "duration" : 4186
+        }
+      }, {
         "uid" : "154eb7b9f2e2676",
         "status" : "passed",
         "time" : {
@@ -269,6 +277,6 @@
     },
     "tags" : [ "connect" ]
   },
-  "source" : "98021565f581662f.json",
+  "source" : "50e9e3ef4a05ceb4.json",
   "parameterValues" : [ ]
 }

@@ -1,47 +1,26 @@
 {
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "children" : [ {
-    "name" : "810f4313ae04",
+    "name" : "556be7ad0aee",
     "children" : [ {
       "name" : "8-MainThread",
       "children" : [ {
         "name" : "Connect Page Test",
-        "uid" : "98021565f581662f",
-        "parentUid" : "956ae12f66c401f8b4fbdfc250dd06d5",
+        "uid" : "50e9e3ef4a05ceb4",
+        "parentUid" : "d6b845adfee532dfa5da1834a7621327",
         "status" : "passed",
         "time" : {
-          "start" : 1753261093347,
-          "stop" : 1753261097533,
-          "duration" : 4186
+          "start" : 1753331160476,
+          "stop" : 1753331164110,
+          "duration" : 3634
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "956ae12f66c401f8b4fbdfc250dd06d5"
+      "uid" : "d6b845adfee532dfa5da1834a7621327"
     } ],
-    "uid" : "d5bfd818c85a91535a2166c742cda2b8"
-  }, {
-    "name" : "071c4ab953e6",
-    "children" : [ {
-      "name" : "8-MainThread",
-      "children" : [ {
-        "name" : "Login Page Test",
-        "uid" : "60d82c361c3e2f3d",
-        "parentUid" : "e822382756a4a47fd1819a8c6ac852a4",
-        "status" : "passed",
-        "time" : {
-          "start" : 1753261093333,
-          "stop" : 1753261099222,
-          "duration" : 5889
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "e822382756a4a47fd1819a8c6ac852a4"
-    } ],
-    "uid" : "7f60eeb4e158fa1bab5a73421e9ec40f"
+    "uid" : "facf34c4b87ca39d7f6fa0929a3434d0"
   } ],
   "name" : "timeline"
 }

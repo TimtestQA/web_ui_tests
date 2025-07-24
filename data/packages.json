@@ -1,43 +1,22 @@
 {
   "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
   "children" : [ {
-    "name" : "tests",
+    "name" : "tests.test_connect",
     "children" : [ {
-      "name" : "test_login",
-      "children" : [ {
-        "name" : "Login Page Test",
-        "uid" : "60d82c361c3e2f3d",
-        "parentUid" : "383153a1e87e9025e9b82f017e857ae3",
-        "status" : "passed",
-        "time" : {
-          "start" : 1753261093333,
-          "stop" : 1753261099222,
-          "duration" : 5889
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "383153a1e87e9025e9b82f017e857ae3"
-    }, {
-      "name" : "test_connect",
-      "children" : [ {
-        "name" : "Connect Page Test",
-        "uid" : "98021565f581662f",
-        "parentUid" : "77cc3326145d24405c277fc47f8eab2a",
-        "status" : "passed",
-        "time" : {
-          "start" : 1753261093347,
-          "stop" : 1753261097533,
-          "duration" : 4186
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "77cc3326145d24405c277fc47f8eab2a"
+      "name" : "Connect Page Test",
+      "uid" : "50e9e3ef4a05ceb4",
+      "parentUid" : "77cc3326145d24405c277fc47f8eab2a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1753331160476,
+        "stop" : 1753331164110,
+        "duration" : 3634
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
     } ],
-    "uid" : "bf49149a3821e34f7608bb6885d52868"
+    "uid" : "tests.test_connect"
   } ],
   "name" : "packages"
 }

@@ -3,39 +3,18 @@
   "children" : [ {
     "name" : "tests",
     "children" : [ {
-      "name" : "test_login",
-      "children" : [ {
-        "name" : "TestLogin",
-        "children" : [ {
-          "name" : "Login Page Test",
-          "uid" : "60d82c361c3e2f3d",
-          "parentUid" : "e073428b7a30684178c11e51fcc1e40c",
-          "status" : "passed",
-          "time" : {
-            "start" : 1753261093333,
-            "stop" : 1753261099222,
-            "duration" : 5889
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ ]
-        } ],
-        "uid" : "e073428b7a30684178c11e51fcc1e40c"
-      } ],
-      "uid" : "d705d85621c348f9ae8ade89e0447582"
-    }, {
       "name" : "test_connect",
       "children" : [ {
         "name" : "TestConnect",
         "children" : [ {
           "name" : "Connect Page Test",
-          "uid" : "98021565f581662f",
+          "uid" : "50e9e3ef4a05ceb4",
           "parentUid" : "f922c90726370ea37263469ed929608e",
           "status" : "passed",
           "time" : {
-            "start" : 1753261093347,
-            "stop" : 1753261097533,
-            "duration" : 4186
+            "start" : 1753331160476,
+            "stop" : 1753331164110,
+            "duration" : 3634
           },
           "flaky" : false,
           "newFailed" : false,

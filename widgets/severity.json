@@ -1,20 +1,10 @@
 [ {
-  "uid" : "98021565f581662f",
+  "uid" : "50e9e3ef4a05ceb4",
   "name" : "Connect Page Test",
   "time" : {
-    "start" : 1753261093347,
-    "stop" : 1753261097533,
-    "duration" : 4186
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "60d82c361c3e2f3d",
-  "name" : "Login Page Test",
-  "time" : {
-    "start" : 1753261093333,
-    "stop" : 1753261099222,
-    "duration" : 5889
+    "start" : 1753331160476,
+    "stop" : 1753331164110,
+    "duration" : 3634
   },
   "status" : "passed",
   "severity" : "normal"

@@ -806,11 +806,19 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 2,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 2
+      "total" : 3
     },
     "items" : [ {
+      "uid" : "50e9e3ef4a05ceb4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1753331160476,
+        "stop" : 1753331164110,
+        "duration" : 3634
+      }
+    }, {
       "uid" : "98021565f581662f",
       "status" : "passed",
       "time" : {
